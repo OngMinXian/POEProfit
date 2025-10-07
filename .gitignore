@@ -1,17 +1,50 @@
+######################################
+# Maven / Java
+######################################
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://maven.apache.org/wrapper/#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+!/.mvn/wrapper/maven-wrapper.properties
+
+######################################
+# Angular
+######################################
+dist/
+tmp/
+out-tsc/
+node_modules/
+.angular/
+
+# Environment files (optional, if sensitive)
+src/environments/environment*.ts
+
+######################################
+# OS-specific
+######################################
+.DS_Store
+Thumbs.db
+
+######################################
+# IDE / Editor
+######################################
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+######################################
+# Logs
+######################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

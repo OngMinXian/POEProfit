@@ -1,0 +1,21 @@
+<h2>Bosses</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Value</th>
+      <th>Profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (boss of bosses; track boss.id) {
+      <tr>
+        <td><a [routerLink]="['/bosses', boss.id]">{{ boss.name }}</a></td>
+        <td>{{ boss.costInChaos }}</td>
+        <td>{{ boss.expectedValueInChaos }}</td>
+        <td>{{ boss.profitInChaos }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
