@@ -1,0 +1,52 @@
+package com.trombae.poeprofitapi.models.configs;
+
+import com.trombae.poeprofitapi.repositories.POENinjaRepository;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.ArrayList;
+
+@Slf4j
+@Data
+public class AbstractConfig {
+    private String name;
+    private String id;
+    private ArrayList<Cost> costs;
+    private ArrayList<Reward> rewards;
+
+    private final String UNABLE_TO_GET_CHAOS_VALUE_LOG = "Unable to get chaos value of {}";
+
+    public void updateCosts(POENinjaRepository poeNinjaRepository) {
+        for (Cost cost : costs) {
+            try {
+                cost.setChaosValue(poeNinjaRepository.getChaosValueOfItem(cost.getName(), cost.getDetailsId()));
+            } catch (Exception ex) {
+                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName());
+                cost.setChaosValue(0);
+            }
+        }
+    }
+
+    public void updateRewards(POENinjaRepository poeNinjaRepository) {
+        for (Reward reward : rewards) {
+            try {
+                reward.setChaosValue(poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
+            } catch (Exception ex) {
+                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName());
+                reward.setChaosValue(0);
+            }
+        }
+    }
+
+    public double getTotalCostInChaos() {
+        return this.getCosts().stream().map(Cost::getTotalCost).reduce(Double::sum).orElseGet(() -> 0.0);
+    }
+
+    public double getTotalExpectedValueInChaos() {
+        return this.getRewards().stream().map(Reward::getExpectedValue).reduce(Double::sum).orElseGet(() -> 0.0);
+    }
+
+    public double getProfit() {
+        return getTotalExpectedValueInChaos() - getTotalCostInChaos();
+    }
+}
