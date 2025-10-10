@@ -7,6 +7,7 @@ public class Reward {
     private String name;
     private Integer id;
     protected String detailsId;
+    private String icon;
     private double probability; // Range: (0, 100]
     private double chaosValue;
     private double expectedValue;

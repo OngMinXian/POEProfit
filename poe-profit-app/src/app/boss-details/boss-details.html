@@ -31,10 +31,31 @@
           <tbody>
             @for (cost of boss?.costs; track cost.name) {
               <tr>
-                <td>{{ cost.name }}</td>
-                <td>{{ cost.chaosValue }}</td>
+                <td>
+                  <img 
+                    [src]="cost.icon" 
+                    alt="{{ cost.name }}" 
+                    class="item-icon"
+                  />
+                  {{ cost.name }}
+                </td>
+                <td>
+                  {{ cost.chaosValue | number : '1.0-0' }}
+                  <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                </td>
                 <td>{{ cost.quantity }}</td>
-                <td>{{ cost.totalCost }}</td>
+                <td>
+                  {{ cost.totalCost | number : '1.0-0' }}
+                  <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                </td>
               </tr>
             }
           </tbody>
@@ -54,10 +75,31 @@
           <tbody>
             @for (reward of boss?.rewards; track reward.name) {
               <tr>
-                <td>{{ reward.name }}</td>
-                <td>{{ reward.chaosValue }}</td>
-                <td>{{ reward.probability }}%</td>
-                <td>{{ reward.expectedValue }}</td>
+                <td>
+                  <img 
+                    [src]="reward.icon" 
+                    alt="{{ reward.name }}" 
+                    class="item-icon"
+                  />
+                  {{ reward.name }}
+                </td>
+                <td>
+                  {{ reward.chaosValue | number : '1.0-0' }}
+                  <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                </td>
+                <td>{{ reward.probability | number:'1.1-1' }}%</td>
+                <td>
+                  {{ reward.expectedValue | number : '1.0-0' }}
+                  <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                </td>
               </tr>
             }
           </tbody>

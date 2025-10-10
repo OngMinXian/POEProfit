@@ -31,8 +31,22 @@
                       {{ boss.name }}
                     </a>
                   </td>
-                  <td>{{ boss.costInChaos | number : '1.0-0' }}</td>
-                  <td>{{ boss.expectedValueInChaos | number : '1.0-0' }}</td>
+                  <td>
+                    {{ boss.costInChaos | number : '1.0-0' }}
+                    <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                  </td>
+                  <td>
+                    {{ boss.expectedValueInChaos | number : '1.0-0' }}
+                    <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
+                  </td>
                   <td
                     [ngClass]="{
                       positive: boss.profitInChaos > 0,
@@ -40,6 +54,11 @@
                     }"
                   >
                     {{ boss.profitInChaos | number : '1.0-0' }}
+                    <img 
+                      [src]="'chaos-orb.png'"
+                      alt="Chaos Orb" 
+                      class="item-icon"
+                    />
                   </td>
                 </tr>
               }

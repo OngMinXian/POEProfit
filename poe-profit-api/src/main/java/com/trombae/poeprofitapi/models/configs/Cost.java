@@ -8,6 +8,7 @@ public class Cost {
     private Integer id;
     protected String detailsId;
     private int quantity;
+    private String icon;
     private double chaosValue;
     private double totalCost;
 

@@ -20,6 +20,7 @@ public class AbstractConfig {
         for (Cost cost : costs) {
             try {
                 cost.setChaosValue(poeNinjaRepository.getChaosValueOfItem(cost.getName(), cost.getDetailsId()));
+                cost.setIcon(poeNinjaRepository.getIconOfItem(cost.getName(), cost.getDetailsId()));
             } catch (Exception ex) {
                 log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName());
                 cost.setChaosValue(0);
@@ -31,6 +32,7 @@ public class AbstractConfig {
         for (Reward reward : rewards) {
             try {
                 reward.setChaosValue(poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
+                reward.setIcon(poeNinjaRepository.getIconOfItem(reward.getName(), reward.getDetailsId()));
             } catch (Exception ex) {
                 log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName());
                 reward.setChaosValue(0);

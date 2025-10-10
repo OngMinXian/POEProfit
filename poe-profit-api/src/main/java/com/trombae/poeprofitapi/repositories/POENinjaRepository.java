@@ -26,6 +26,15 @@ public class POENinjaRepository {
         return detailsIDToItemCache.get(detailsID).getChaosValue();
     }
 
+    public String getIconOfItem(String name, String detailsID) {
+        // TODO: Handle unidentified items
+        // TODO: Handle currency
+        if (detailsID == null) {
+            detailsID = getNameToDetailsIDCache().get(name);
+        }
+        return detailsIDToItemCache.get(detailsID).getIcon();
+    }
+
     private HashMap<String, String> getNameToDetailsIDCache() {
         // TODO: Refresh prices every 5 minutes
         return this.nameToDetailsIDCache;

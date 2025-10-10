@@ -8,6 +8,7 @@ interface Cost {
   quantity: number;
   chaosValue: number;
   totalCost: number;
+  icon: string;
 }
 
 interface Reward {
@@ -15,6 +16,7 @@ interface Reward {
   probability: number;
   chaosValue: number;
   expectedValue: number;
+  icon: string;
 }
 
 interface BossDTO {
