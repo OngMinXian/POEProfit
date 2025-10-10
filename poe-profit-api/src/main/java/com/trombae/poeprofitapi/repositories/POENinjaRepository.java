@@ -4,13 +4,19 @@ import com.trombae.poeprofitapi.models.poeninja.AbstractPOENinjaModel;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaCurrencyParser;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaItemParser;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
 @Slf4j
+@Component
 public class POENinjaRepository {
     private HashMap<String, String> nameToDetailsIDCache;
     private HashMap<String, AbstractPOENinjaModel> detailsIDToItemCache;
+
+    private final int CACHE_DURATION_IN_MINS = 10;
+    private final int CACHE_DURATION = CACHE_DURATION_IN_MINS * 60 * 1000;
 
     public POENinjaRepository() {
         this.nameToDetailsIDCache = new HashMap<>();
@@ -28,7 +34,6 @@ public class POENinjaRepository {
 
     public String getIconOfItem(String name, String detailsID) {
         // TODO: Handle unidentified items
-        // TODO: Handle currency
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
@@ -36,15 +41,14 @@ public class POENinjaRepository {
     }
 
     private HashMap<String, String> getNameToDetailsIDCache() {
-        // TODO: Refresh prices every 5 minutes
         return this.nameToDetailsIDCache;
     }
 
     private HashMap<String, AbstractPOENinjaModel> getDetailsIDToItemCache() {
-        // TODO: Refresh prices every 5 minutes
         return this.detailsIDToItemCache;
     }
 
+    @Scheduled(fixedRate = CACHE_DURATION)
     private void refreshCache() {
         for (AbstractPOENinjaModel currency : POENinjaCurrencyParser.getAllCurrencies()) {
             getNameToDetailsIDCache().put(currency.getName(), currency.getDetailsId());
