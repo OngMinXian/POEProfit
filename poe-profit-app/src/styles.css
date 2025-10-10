@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;      /* remove default browser margin */
+  padding: 0;     /* remove default browser padding */
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* optional: prevent horizontal scroll */
+  background-color: black;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), 
+  url('/bosses-background.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column; /* So top-bar and content stack vertically */
+  align-items: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* 🔹 Top Bar */
+.top-bar {
+  position: relative; /* or fixed if you want it to stay on top */
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+  box-sizing: border-box; /* ✅ include padding in width */
+  background-color: rgba(15, 15, 15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.logo {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
+}
+
+/* 🔹 Main content panel */
+.content-panel {
+  position: relative;
+  width: 65%;
+  background-color: rgba(12, 12, 12, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  margin-top: 1rem; /* spacing between top bar and panel */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Table & content styles (unchanged) */
+.content-container {
+  flex: 1;
+  padding: 2rem;
+  color: #e0e0e0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.content-container h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.bosses-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.bosses-table thead {
+  background-color: #222;
+}
+
+.bosses-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b0b0b0;
+  border-bottom: 1px solid #333;
+}
+
+.bosses-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.bosses-table tbody tr:hover {
+  background-color: #292929;
+  transition: background-color 0.2s ease;
+}
+
+.boss-link {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.boss-link:hover {
+  color: #81d4fa;
+  text-decoration: underline;
+}
+
+.positive {
+  color: #8bc34a;
+  font-weight: 600;
+}
+
+.negative {
+  color: #e57373;
+  font-weight: 600;
+}

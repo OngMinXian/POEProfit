@@ -1,21 +1,52 @@
-<h2>Bosses</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cost</th>
-      <th>Value</th>
-      <th>Profit</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for (boss of bosses; track boss.id) {
-      <tr>
-        <td><a [routerLink]="['/bosses', boss.id]">{{ boss.name }}</a></td>
-        <td>{{ boss.costInChaos }}</td>
-        <td>{{ boss.expectedValueInChaos }}</td>
-        <td>{{ boss.profitInChaos }}</td>
-      </tr>
-    }
-  </tbody>
-</table>
+<div>
+  <!-- 🔹 Top bar -->
+  <header class="top-bar">
+    <div class="logo">POE Profit</div>
+  </header>
+
+  <div class="background">
+
+    <div class="overlay"></div>
+    
+    <!-- 🔹 Main content panel -->
+    <div class="content-panel">
+      <div class="content-container">
+        <h2>Bosses</h2>
+
+        <div class="table-wrapper">
+          <table class="bosses-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Value</th>
+                <th>Profit</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (boss of bosses; track boss.id) {
+                <tr>
+                  <td>
+                    <a [routerLink]="['/bosses', boss.id]" class="boss-link">
+                      {{ boss.name }}
+                    </a>
+                  </td>
+                  <td>{{ boss.costInChaos | number : '1.0-0' }}</td>
+                  <td>{{ boss.expectedValueInChaos | number : '1.0-0' }}</td>
+                  <td
+                    [ngClass]="{
+                      positive: boss.profitInChaos > 0,
+                      negative: boss.profitInChaos < 0
+                    }"
+                  >
+                    {{ boss.profitInChaos | number : '1.0-0' }}
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
