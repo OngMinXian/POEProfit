@@ -1,5 +1,6 @@
 package com.trombae.poeprofitapi.repositories;
 
+import com.trombae.poeprofitapi.constants.RepositoryConstants;
 import com.trombae.poeprofitapi.models.poeninja.AbstractPOENinjaModel;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaCurrencyParser;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaItemParser;
@@ -15,9 +16,6 @@ public class POENinjaRepository {
     private HashMap<String, String> nameToDetailsIDCache;
     private HashMap<String, AbstractPOENinjaModel> detailsIDToItemCache;
 
-    private final int CACHE_DURATION_IN_MINS = 10;
-    private final int CACHE_DURATION = CACHE_DURATION_IN_MINS * 60 * 1000;
-
     public POENinjaRepository() {
         this.nameToDetailsIDCache = new HashMap<>();
         this.detailsIDToItemCache = new HashMap<>();
@@ -25,7 +23,6 @@ public class POENinjaRepository {
     }
 
     public double getChaosValueOfItem(String name, String detailsID) {
-        // TODO: Handle unidentified items
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
@@ -33,7 +30,6 @@ public class POENinjaRepository {
     }
 
     public String getIconOfItem(String name, String detailsID) {
-        // TODO: Handle unidentified items
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
@@ -48,8 +44,9 @@ public class POENinjaRepository {
         return this.detailsIDToItemCache;
     }
 
-    @Scheduled(fixedRate = CACHE_DURATION)
+    @Scheduled(fixedRate = RepositoryConstants.CACHE_DURATION, initialDelay = RepositoryConstants.CACHE_DURATION)
     private void refreshCache() {
+        log.info("Refreshing POE Ninja Repository Cache");
         for (AbstractPOENinjaModel currency : POENinjaCurrencyParser.getAllCurrencies()) {
             getNameToDetailsIDCache().put(currency.getName(), currency.getDetailsId());
             getDetailsIDToItemCache().put(currency.getDetailsId(), currency);
