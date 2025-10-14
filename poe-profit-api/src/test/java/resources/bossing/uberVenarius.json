@@ -1,0 +1,36 @@
+{
+  "name": "Uber Venarius",
+  "id": "uberVenarius",
+  "costs": [
+    {
+      "name": "Synthesising Fragment",
+      "quantity": 5
+    }
+  ],
+  "rewards": [
+    {
+      "name": "The Apostate",
+      "probability": 43.0
+    },
+    {
+      "name": "Rational Doctrine",
+      "probability": 2.0
+    },
+    {
+      "name": "Mask of the Tribunal",
+      "probability": 40.0
+    },
+    {
+      "name": "Nebulis",
+      "probability": 33.0
+    },
+    {
+      "name": "Circle of Ambition",
+      "probability": 17.0
+    },
+    {
+      "name": "The Hook",
+      "probability": 5.0
+    }
+  ]
+}

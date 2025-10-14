@@ -14,6 +14,7 @@ public class Reward {
     private double expectedValue;
     private boolean unidentified;
     private String poeWatchName;
+    private Integer level;
 
     public void setProbability(double probability) {
         this.probability = probability;

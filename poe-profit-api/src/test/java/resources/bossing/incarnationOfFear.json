@@ -1,0 +1,36 @@
+{
+  "name": "Incarnation of Fear",
+  "id": "incartionOfFear",
+  "costs": [
+    {
+      "name": "Echo of Trauma",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Orb of Intention",
+      "probability": 33.0
+    },
+    {
+      "name": "Enmity's Embrace",
+      "probability": 80.0
+    },
+    {
+      "name": "Coiling Whisper",
+      "probability": 40.0
+    },
+    {
+      "name": "Servant of Decay",
+      "probability": 50.0
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 8.5
+    },
+    {
+      "name": "Starcaller",
+      "probability": 2.0
+    }
+  ]
+}

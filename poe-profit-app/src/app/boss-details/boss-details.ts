@@ -48,7 +48,8 @@ export class BossDetailComponent implements OnInit {
         .subscribe(data => this.boss = data);
     }
   }
-
+  
+  // TODO: Move back to bosses pape
   goBack(): void {
     this.location.back();
   }

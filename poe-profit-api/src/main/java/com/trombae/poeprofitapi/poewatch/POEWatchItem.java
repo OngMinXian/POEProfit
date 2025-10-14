@@ -8,4 +8,5 @@ import lombok.Data;
 public class POEWatchItem {
     private String name;
     private double mean;
+    private Integer itemLevel;
 }

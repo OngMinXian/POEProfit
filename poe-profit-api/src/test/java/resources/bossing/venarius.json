@@ -1,0 +1,32 @@
+{
+  "name": "Venarius",
+  "id": "venarius",
+  "costs": [
+    {
+      "name": "Cortex",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Garb of the Ephemeral",
+      "probability": 8.0
+    },
+    {
+      "name": "Bottled Faith",
+      "probability": 2.0
+    },
+    {
+      "name": "Perepiteia",
+      "probability": 45.0
+    },
+    {
+      "name": "Offering to the Serpent",
+      "probability": 45.0
+    },
+    {
+      "name": "The Hook",
+      "probability": 5.0
+    }
+  ]
+}

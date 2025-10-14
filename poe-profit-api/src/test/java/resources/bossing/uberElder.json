@@ -1,0 +1,70 @@
+{
+  "name": "Uber Elder",
+  "id": "uberElder",
+  "costs": [
+    {
+      "name": "Fragment of Knowledge",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Shape",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Terror",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Emptiness",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Watcher's Eye",
+      "probability": 35.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Watcher's Eye 86"
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 15.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 5.0
+    },
+    {
+      "name": "Shaper's Exalted Orb",
+      "probability": 15.0
+    },
+    {
+      "name": "Mark of the Elder",
+      "probability": 35.0
+    },
+    {
+      "name": "Mark of the Shaper",
+      "probability": 35.0
+    },
+    {
+      "name": "Indigon",
+      "probability": 4.0
+    },
+    {
+      "name": "The Gulf",
+      "probability": 4.0
+    },
+    {
+      "name": "Voidfletcher",
+      "probability": 25.0
+    },
+    {
+      "name": "Void of the Elements",
+      "probability": 4.0
+    },
+    {
+      "name": "Disintegrator",
+      "probability": 1.0
+    }
+  ]
+}

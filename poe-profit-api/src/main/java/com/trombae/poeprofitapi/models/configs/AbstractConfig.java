@@ -33,7 +33,7 @@ public class AbstractConfig {
         for (Reward reward : rewards) {
             try {
                 reward.setChaosValue(reward.isUnidentified() ?
-                        poeWatchRepository.getChaosValueOfItem(reward.getPoeWatchName()) :
+                        poeWatchRepository.getChaosValueOfItem(reward.getPoeWatchName(), reward.getLevel()) :
                         poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
                 reward.setIcon(poeNinjaRepository.getIconOfItem(reward.getName(), reward.getDetailsId()));
             } catch (Exception ex) {

@@ -1,0 +1,91 @@
+{
+  "name": "Elder",
+  "id": "elder",
+  "costs": [
+    {
+      "name": "Fragment of Purification",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Constriction",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Enslavement",
+      "quantity": 1
+    },
+    {
+      "name": "Fragment of Eradication",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Fragment of Terror",
+      "probability": 50.0
+    },
+    {
+      "name": "Fragment of Emptiness",
+      "probability": 50.0
+    },
+    {
+      "name": "Cyclopean Coil",
+      "probability": 25.0
+    },
+    {
+      "name": "Blasphemer's Grasp",
+      "probability": 25.0
+    },
+    {
+      "name": "Nebuloch",
+      "probability": 10.0
+    },
+    {
+      "name": "Hopeshredder",
+      "probability": 10.0
+    },
+    {
+      "name": "Shimmeron",
+      "probability": 10.0
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 10.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 2.0
+    },
+    {
+      "name": "Watcher's Eye",
+      "probability": 40.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Watcher's Eye 85"
+    },
+    {
+      "name": "Impresence (Fire)",
+      "detailsId": "impresence-fire-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Chaos)",
+      "detailsId": "impresence-chaos-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Physical)",
+      "detailsId": "impresence-physical-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Lightning)",
+      "detailsId": "impresence-lightning-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Cold)",
+      "detailsId": "impresence-cold-onyx-amulet",
+      "probability": 4.0
+    }
+  ]
+}

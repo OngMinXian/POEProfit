@@ -1,0 +1,51 @@
+{
+  "name": "Uber Eater of Worlds",
+  "id": "uberEaterOfWorlds",
+  "costs": [
+    {
+      "name": "Devouring Fragment",
+      "quantity": 5
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Forbidden Flesh",
+      "probability": 5.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Forbidden Flesh",
+      "level": 86
+    },
+    {
+      "name": "Nimis",
+      "probability": 1.0
+    },
+    {
+      "name": "Ashes of the Stars",
+      "probability": 33.0
+    },
+    {
+      "name": "Exceptional Eldritch Ichor",
+      "probability": 15.0
+    },
+    {
+      "name": "Curio of Consumption",
+      "probability": 5.0
+    },
+    {
+      "name": "Ravenous Passion",
+      "probability": 66.0
+    },
+    {
+      "name": "Eldritch Chaos Orb",
+      "probability": 5.0
+    },
+    {
+      "name": "Eldritch Orb of Annulment",
+      "probability": 5.0
+    },
+    {
+      "name": "Eldritch Exalted Orb",
+      "probability": 5.0
+    }
+  ]
+}

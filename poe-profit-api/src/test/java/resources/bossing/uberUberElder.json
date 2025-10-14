@@ -1,0 +1,93 @@
+{
+  "name": "Uber Uber Elder",
+  "id": "uberUberElder",
+  "costs": [
+    {
+      "name": "Decaying Fragment",
+      "quantity": 5
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Sublime Vision",
+      "probability": 2.5,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Sublime Vision"
+    },
+    {
+      "name": "Watcher's Eye",
+      "probability": 35.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Watcher's Eye 86"
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 15.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 5.0
+    },
+    {
+      "name": "Shaper's Exalted Orb",
+      "probability": 15.0
+    },
+    {
+      "name": "Soul Ascension",
+      "probability": 10.0
+    },
+    {
+      "name": "Call of the Void",
+      "probability": 50.0
+    },
+    {
+      "name": "Voidforge",
+      "probability": 1.0
+    },
+    {
+      "name": "The Devourer of Minds",
+      "probability": 30.0
+    },
+    {
+      "name": "The Eternity Shroud",
+      "probability": 9.0
+    },
+    {
+      "name": "The Gulf",
+      "probability": 4.0
+    },
+    {
+      "name": "Curio of Decay",
+      "probability": 5.0
+    },
+    {
+      "name": "Void of the Elements",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Fire)",
+      "detailsId": "impresence-fire-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Chaos)",
+      "detailsId": "impresence-chaos-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Physical)",
+      "detailsId": "impresence-physical-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Lightning)",
+      "detailsId": "impresence-lightning-onyx-amulet",
+      "probability": 4.0
+    },
+    {
+      "name": "Impresence (Cold)",
+      "detailsId": "impresence-cold-onyx-amulet",
+      "probability": 4.0
+    }
+  ]
+}
