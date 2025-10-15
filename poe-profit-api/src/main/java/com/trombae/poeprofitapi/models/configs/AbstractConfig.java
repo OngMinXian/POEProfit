@@ -1,6 +1,7 @@
 package com.trombae.poeprofitapi.models.configs;
 
 import com.trombae.poeprofitapi.repositories.POENinjaRepository;
+import com.trombae.poeprofitapi.repositories.POEWatchRepository;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,19 +23,21 @@ public class AbstractConfig {
                 cost.setChaosValue(poeNinjaRepository.getChaosValueOfItem(cost.getName(), cost.getDetailsId()));
                 cost.setIcon(poeNinjaRepository.getIconOfItem(cost.getName(), cost.getDetailsId()));
             } catch (Exception ex) {
-                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName());
+                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName(), ex);
                 cost.setChaosValue(0);
             }
         }
     }
 
-    public void updateRewards(POENinjaRepository poeNinjaRepository) {
+    public void updateRewards(POENinjaRepository poeNinjaRepository, POEWatchRepository poeWatchRepository) {
         for (Reward reward : rewards) {
             try {
-                reward.setChaosValue(poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
+                reward.setChaosValue(reward.isUnidentified() ?
+                        poeWatchRepository.getChaosValueOfItem(reward.getPoeWatchName(), reward.getLevel()) :
+                        poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
                 reward.setIcon(poeNinjaRepository.getIconOfItem(reward.getName(), reward.getDetailsId()));
             } catch (Exception ex) {
-                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName());
+                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName(), ex);
                 reward.setChaosValue(0);
             }
         }

@@ -1,0 +1,40 @@
+{
+  "name": "Incarnation of Neglect",
+  "id": "incartionOfNeglect",
+  "costs": [
+    {
+      "name": "Echo of Loneliness",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Orb of Remembrance",
+      "probability": 33.0
+    },
+    {
+      "name": "Betrayal's Sting",
+      "probability": 50.0
+    },
+    {
+      "name": "Venarius' Astrolabe",
+      "probability": 10.0
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 8.5
+    },
+    {
+      "name": "The Arkhon's Tools",
+      "probability": 37.0
+    },
+    {
+      "name": "Legacy of the Rose",
+      "probability": 1.5
+    },
+    {
+      "name": "Monochrome",
+      "probability": 2.5
+    }
+  ]
+}

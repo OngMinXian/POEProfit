@@ -1,0 +1,47 @@
+{
+  "name": "Eater of Worlds",
+  "id": "eaterOfWorlds",
+  "costs": [
+    {
+      "name": "Screaming Invitation",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Forbidden Flesh",
+      "probability": 5.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Forbidden Flesh",
+      "level": 85
+    },
+    {
+      "name": "Exceptional Eldritch Ichor",
+      "probability": 15.0
+    },
+    {
+      "name": "Melding of the Flesh",
+      "probability": 2
+    },
+    {
+      "name": "The Gluttonous Tide",
+      "probability": 50.0
+    },
+    {
+      "name": "Inextricable Fate",
+      "probability": 50.0
+    },
+    {
+      "name": "Eldritch Chaos Orb",
+      "probability": 5.0
+    },
+    {
+      "name": "Eldritch Orb of Annulment",
+      "probability": 5.0
+    },
+    {
+      "name": "Eldritch Exalted Orb",
+      "probability": 5.0
+    }
+  ]
+}

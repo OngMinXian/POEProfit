@@ -1,13 +1,17 @@
 package com.trombae.poeprofitapi.repositories;
 
+import com.trombae.poeprofitapi.constants.RepositoryConstants;
 import com.trombae.poeprofitapi.models.poeninja.AbstractPOENinjaModel;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaCurrencyParser;
 import com.trombae.poeprofitapi.utils.parsers.POENinjaItemParser;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
 @Slf4j
+@Component
 public class POENinjaRepository {
     private HashMap<String, String> nameToDetailsIDCache;
     private HashMap<String, AbstractPOENinjaModel> detailsIDToItemCache;
@@ -19,7 +23,6 @@ public class POENinjaRepository {
     }
 
     public double getChaosValueOfItem(String name, String detailsID) {
-        // TODO: Handle unidentified items
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
@@ -27,8 +30,6 @@ public class POENinjaRepository {
     }
 
     public String getIconOfItem(String name, String detailsID) {
-        // TODO: Handle unidentified items
-        // TODO: Handle currency
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
@@ -36,16 +37,16 @@ public class POENinjaRepository {
     }
 
     private HashMap<String, String> getNameToDetailsIDCache() {
-        // TODO: Refresh prices every 5 minutes
         return this.nameToDetailsIDCache;
     }
 
     private HashMap<String, AbstractPOENinjaModel> getDetailsIDToItemCache() {
-        // TODO: Refresh prices every 5 minutes
         return this.detailsIDToItemCache;
     }
 
+    @Scheduled(fixedRate = RepositoryConstants.CACHE_DURATION, initialDelay = RepositoryConstants.CACHE_DURATION)
     private void refreshCache() {
+        log.info("Refreshing POE Ninja Repository Cache");
         for (AbstractPOENinjaModel currency : POENinjaCurrencyParser.getAllCurrencies()) {
             getNameToDetailsIDCache().put(currency.getName(), currency.getDetailsId());
             getDetailsIDToItemCache().put(currency.getDetailsId(), currency);

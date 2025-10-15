@@ -1,0 +1,36 @@
+{
+  "name": "Incarnation of Dread",
+  "id": "incartionOfDread",
+  "costs": [
+    {
+      "name": "Echo of Reverence",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Orb of Unravelling",
+      "probability": 33.0
+    },
+    {
+      "name": "Wine of the Prophet",
+      "probability": 2.5
+    },
+    {
+      "name": "Whispers of Infinity",
+      "probability": 50.0
+    },
+    {
+      "name": "The Dark Monarch",
+      "probability": 35.0
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 8.5
+    },
+    {
+      "name": "Seven Teachings",
+      "probability": 15.0
+    }
+  ]
+}

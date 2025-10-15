@@ -1,0 +1,47 @@
+{
+  "name": "Searing Exarch",
+  "id": "searingExarch",
+  "costs": [
+    {
+      "name": "Incandescent Invitation",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Forbidden Flame",
+      "probability": 5.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Forbidden Flame",
+      "level": 85
+    },
+    {
+      "name": "Exceptional Eldritch Ember",
+      "probability": 15.0
+    },
+    {
+      "name": "Dawnbreaker",
+      "probability": 75.0
+    },
+    {
+      "name": "Dissolution of the Flesh",
+      "probability": 4.0
+    },
+    {
+      "name": "Eldritch Chaos Orb",
+      "probability": 5.0
+    },
+    {
+      "name": "Dawnstrider",
+      "probability": 20.0
+    },
+    {
+      "name": "Eldritch Orb of Annulment",
+      "probability": 5.0
+    },
+    {
+      "name": "Eldritch Exalted Orb",
+      "probability": 5.0
+    }
+  ]
+}

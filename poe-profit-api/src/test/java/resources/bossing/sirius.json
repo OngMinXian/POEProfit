@@ -1,0 +1,54 @@
+{
+  "name": "Sirius",
+  "id": "sirius",
+  "costs": [
+    {
+      "name": "Baran's Crest",
+      "quantity": 1
+    },
+    {
+      "name": "Al-Hezmin's Crest",
+      "quantity": 1
+    },
+    {
+      "name": "Drox's Crest",
+      "quantity": 1
+    },
+    {
+      "name": "Veritania's Crest",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Awakener's Orb",
+      "probability": 15.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 5.0
+    },
+    {
+      "name": "Crown of the Inward Eye",
+      "probability": 38.0
+    },
+    {
+      "name": "Hands of the High Templar",
+      "probability": 45.0
+    },
+    {
+      "name": "Thread of Hope",
+      "probability": 2.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Thread of Hope"
+    },
+    {
+      "name": "The Burden of Truth",
+      "probability": 15.0
+    },
+    {
+      "name": "A Fate Worse Than Death",
+      "probability": 5.0
+    }
+  ]
+}

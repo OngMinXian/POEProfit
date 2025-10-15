@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.trombae.poeprofitapi.models.DTOs.BossDTO;
 import com.trombae.poeprofitapi.models.configs.BossingConfig;
 import com.trombae.poeprofitapi.repositories.POENinjaRepository;
+import com.trombae.poeprofitapi.repositories.POEWatchRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -18,19 +19,21 @@ import java.util.stream.Collectors;
 @Service
 public class BossingService {
     private POENinjaRepository poeNinjaRepository;
+    private POEWatchRepository poeWatchRepository;
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     private final String BOSSING_CONFIG_DIR = "/opt/trombae/bossing/";
 
     public BossingService() {
         this.poeNinjaRepository = new POENinjaRepository();
+        this.poeWatchRepository = new POEWatchRepository();
     }
 
     private BossingConfig getBossingConfig(File bossConfigFile) {
         try {
             BossingConfig bossingConfig = objectMapper.readValue(bossConfigFile, BossingConfig.class);
             bossingConfig.updateCosts(poeNinjaRepository);
-            bossingConfig.updateRewards(poeNinjaRepository);
+            bossingConfig.updateRewards(poeNinjaRepository, poeWatchRepository);
             return bossingConfig;
         } catch (Exception ex) {
             log.error("Unable to read config file '{}'. Exception: {}", bossConfigFile.getName(), ex.getMessage());

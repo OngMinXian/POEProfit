@@ -1,5 +1,6 @@
 package com.trombae.poeprofitapi.models.configs;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
@@ -11,6 +12,9 @@ public class Reward {
     private double probability; // Range: (0, 100]
     private double chaosValue;
     private double expectedValue;
+    private boolean unidentified;
+    private String poeWatchName;
+    private Integer level;
 
     public void setProbability(double probability) {
         this.probability = probability;
