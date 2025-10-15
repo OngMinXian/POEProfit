@@ -8,6 +8,7 @@ public final class POENinjaConstants {
         public static final String ITEM_ENDPOINT = "itemoverview";
 
         public static final String LINES_JSON_FIELD = "lines";
+        public static final String CURRENCY_DETAILS_JSON_FIELD = "currencyDetails";
     }
 
     @Getter

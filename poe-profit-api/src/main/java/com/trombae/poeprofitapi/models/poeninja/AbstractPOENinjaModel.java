@@ -11,4 +11,5 @@ public abstract class AbstractPOENinjaModel {
     protected String detailsId;
     protected double chaosValue;
     protected String type;
+    protected String icon;
 }

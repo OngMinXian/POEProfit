@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,6 +8,7 @@ interface Cost {
   quantity: number;
   chaosValue: number;
   totalCost: number;
+  icon: string;
 }
 
 interface Reward {
@@ -15,6 +16,7 @@ interface Reward {
   probability: number;
   chaosValue: number;
   expectedValue: number;
+  icon: string;
 }
 
 interface BossDTO {
@@ -37,7 +39,7 @@ interface BossDTO {
 export class BossDetailComponent implements OnInit {
   boss?: BossDTO;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private location: Location) {}
 
   ngOnInit(): void {
     const bossId = this.route.snapshot.paramMap.get('id');
@@ -45,5 +47,9 @@ export class BossDetailComponent implements OnInit {
       this.http.get<BossDTO>(`http://localhost:8080/api/bosses/${bossId}`)
         .subscribe(data => this.boss = data);
     }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
