@@ -1,0 +1,134 @@
+.boss-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Name + Cards) */
+.boss-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread name + cards to fill full height */
+  height: 100%;
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Boss Name Styling */
+.boss-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #f5d47a;
+}
+
+/* Cards Layout */
+.boss-cards-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.boss-info-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 16px;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boss-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.boss-card-label {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 6px;
+}
+
+.boss-card-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Boss Image */
+.boss-image-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.boss-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background-color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .boss-summary-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boss-left-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .boss-cards-container {
+    justify-content: center;
+  }
+
+  .boss-image {
+    margin-top: 16px;
+  }
+}
+
+
+.boss-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.boss-table thead {
+  background-color: #222;
+}
+
+.boss-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b0b0b0;
+  border-bottom: 1px solid #333;
+}
+
+.boss-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.boss-table tbody tr:hover {
+  background-color: #292929;
+  transition: background-color 0.2s ease;
+}
