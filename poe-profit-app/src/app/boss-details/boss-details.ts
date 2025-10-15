@@ -27,6 +27,8 @@ interface BossDTO {
   profitInChaos: number;
   costs: Cost[];
   rewards: Reward[];
+  wikiUrl: string;
+  imageUrl: string;
 }
 
 @Component({

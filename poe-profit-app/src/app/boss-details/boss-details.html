@@ -16,7 +16,69 @@
           ← Back
         </button>
 
-        <h2>{{ boss?.name }}</h2>
+        @if (boss) {
+<div class="boss-summary-container">
+  <!-- Left: Name + Cards -->
+  <div class="left-section">
+    <!-- Boss Name -->
+     <h2 class="boss-name">
+      @if (boss.wikiUrl) {
+        <a 
+          [href]="boss.wikiUrl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          {{ boss.name }}
+        </a>
+      } @else {
+        {{ boss.name }}
+      }
+      </h2>
+
+    <!-- Cards -->
+    <div class="cards-container">
+      <div class="info-card">
+        <h4 class="card-label">Cost</h4>
+        <h3 class="card-value cost">
+          {{ boss.costInChaos | number : '1.0-0' }}c
+        </h3>
+      </div>
+
+      <div class="info-card">
+        <h4 class="card-label">Expected Value</h4>
+        <h3 class="card-value value">
+          {{ boss.expectedValueInChaos | number : '1.0-0' }}c
+        </h3>
+      </div>
+
+      <div
+        class="info-card"
+        [ngClass]="{
+          'profit-positive': boss.profitInChaos > 0,
+          'profit-negative': boss.profitInChaos < 0
+        }"
+      >
+        <h4 class="card-label">Profit</h4>
+        <h3 class="card-value">
+          {{ boss.profitInChaos | number : '1.0-0' }}c
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Boss Image -->
+  <div class="boss-image-container">
+    <img
+      [src]="boss.imageUrl"
+      [alt]="boss.name"
+      class="boss-image"
+    />
+  </div>
+</div>
+
+
+
+        <h3>Cost Breakdown</h3>
 
         <div class="table-wrapper">
         <table class="bosses-table">
@@ -29,7 +91,7 @@
             </tr>
           </thead>
           <tbody>
-            @for (cost of boss?.costs; track cost.name) {
+            @for (cost of boss.costs; track cost.name) {
               <tr>
                 <td>
                   <img 
@@ -62,6 +124,8 @@
         </table>
         </div>
 
+<h3>Reward List</h3>
+
         <div class="table-wrapper">
         <table class="bosses-table">
           <thead>
@@ -73,7 +137,7 @@
             </tr>
           </thead>
           <tbody>
-            @for (reward of boss?.rewards; track reward.name) {
+            @for (reward of boss.rewards; track reward.name) {
               <tr>
                 <td>
                   <img 
@@ -105,6 +169,7 @@
           </tbody>
         </table>
 </div>
+}
       </div>
     </div>
   </div>

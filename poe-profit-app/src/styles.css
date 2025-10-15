@@ -134,3 +134,120 @@ html, body {
   color: #e57373;
   font-weight: 600;
 }
+
+.boss-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Name + Cards) */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread name + cards to fill full height */
+  height: 100%;
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Boss Name Styling */
+.boss-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #f5d47a;
+}
+
+/* Cards Layout */
+.cards-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 16px;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.card-label {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cost {
+  color: #e57373;
+}
+
+.value {
+  color: #81c784;
+}
+
+.profit-positive .card-value {
+  color: #00e676;
+}
+
+.profit-negative .card-value {
+  color: #ff5252;
+}
+
+/* Boss Image */
+.boss-image-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.boss-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background-color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .boss-summary-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cards-container {
+    justify-content: center;
+  }
+
+  .boss-image {
+    margin-top: 16px;
+  }
+}

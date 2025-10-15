@@ -14,6 +14,8 @@ public class AbstractConfig {
     private String id;
     private ArrayList<Cost> costs;
     private ArrayList<Reward> rewards;
+    private String wikiUrl;
+    private String imageUrl;
 
     private final String UNABLE_TO_GET_CHAOS_VALUE_LOG = "Unable to get chaos value of {}";
 
