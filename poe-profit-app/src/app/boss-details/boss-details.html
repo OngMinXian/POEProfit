@@ -5,62 +5,89 @@
    </header>
    <div class="background">
       <div class="overlay"></div>
-      <!-- Main content panel -->
-      <div class="content-panel">
-         <div class="content-container">
-            <button class="boss-back-button" (click)="goBack()">
-            ← Back
-            </button>
-            @if (boss) {
-            <div class="boss-summary-container">
-               <!-- Left: Name + Info Cards -->
-               <div class="boss-left-section">
-                  <!-- Boss Name -->
-                  <h2 class="boss-name">
-                     @if (boss.wikiUrl) {
-                     <a 
-                        [href]="boss.wikiUrl" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        >
-                     {{ boss.name }}
-                     </a>
-                     } @else {
-                     {{ boss.name }}
-                     }
-                  </h2>
-                  <!-- Info Cards -->
-                  <div class="boss-cards-container">
+
+      @if (boss) {
+
+      <div class="boss-top-content-panel">
+         <div class="boss-top-content-container">
+            
+            <div class="boss-top-content-left-container">
+
+               <div class="boss-top-content-icons">
+<button (click)="goBack()" title="Back">
+    <mat-icon>keyboard_double_arrow_left</mat-icon>
+  </button>
+
+            <a 
+      [href]="boss.wikiUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Wiki"
+    >
+    <mat-icon>info</mat-icon></a>
+               </div>
+
+               
+
+    <div class="boss-name-container">
+<h2 class="boss-name">{{ boss.name }}</h2>
+    </div>
+
+    <div class="boss-summary-container">
                      <div class="boss-info-card">
                         <h4 class="boss-card-label">Cost</h4>
                         <h3 class="boss-card-value">
-                           {{ boss.costInChaos | number : '1.0-0' }}c
+                           {{ boss.costInChaos | number : '1.0-0' }}
+                           <img 
+                              [src]="'chaos-orb.png'"
+                              alt="Chaos Orb" 
+                              class="item-icon"
+                              />
                         </h3>
                      </div>
                      <div class="boss-info-card">
-                        <h4 class="boss-card-label">Expected Value</h4>
+                        <h4 class="boss-card-label">Value</h4>
                         <h3 class="boss-card-value">
-                           {{ boss.expectedValueInChaos | number : '1.0-0' }}c
+                           {{ boss.expectedValueInChaos | number : '1.0-0' }}
+                           <img 
+                              [src]="'chaos-orb.png'"
+                              alt="Chaos Orb" 
+                              class="item-icon"
+                              />
                         </h3>
                      </div>
                      <div  class="boss-info-card">
                         <h4 class="boss-card-label">Profit</h4>
                         <h3 class="boss-card-value">
-                           {{ boss.profitInChaos | number : '1.0-0' }}c
+                           {{ boss.profitInChaos | number : '1.0-0' }}
+                           <img 
+                              [src]="'chaos-orb.png'"
+                              alt="Chaos Orb" 
+                              class="item-icon"
+                              />
                         </h3>
                      </div>
                   </div>
-               </div>
-               <!-- Right: Boss Image -->
-               <div class="boss-image-container">
-                  <img
-                  [src]="boss.imageUrl"
-                  [alt]="boss.name"
-                  class="boss-image"
-                  />
-               </div>
+
+
             </div>
-            <!-- Cost -->
+
+            <div class="boss-top-content-right-container">
+
+<img
+      [src]="boss.imageUrl"
+      [alt]="boss.imageUrl"
+      class="boss-image-rect"
+    />
+
+            </div>
+         </div>
+      </div>
+
+
+      <div class="boss-bottom-content-panel">
+         <div class="boss-bottom-content-container">
+     
             <h3>Cost Breakdown</h3>
             <div class="table-wrapper">
                <table class="boss-table">
@@ -105,7 +132,7 @@
                   </tbody>
                </table>
             </div>
-            <!-- Reward -->
+       
             <h3>Reward List</h3>
             <div class="table-wrapper">
                <table class="boss-table">
@@ -150,8 +177,11 @@
                   </tbody>
                </table>
             </div>
-            }
+            
          </div>
       </div>
+
+      
+   }
    </div>
 </div>
