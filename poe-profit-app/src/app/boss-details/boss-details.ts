@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 interface Cost {
   name: string;
@@ -27,12 +28,14 @@ interface BossDTO {
   profitInChaos: number;
   costs: Cost[];
   rewards: Reward[];
+  wikiUrl: string;
+  imageUrl: string;
 }
 
 @Component({
   selector: 'app-boss-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './boss-details.html',
   styleUrls: ['./boss-details.css'],
 })

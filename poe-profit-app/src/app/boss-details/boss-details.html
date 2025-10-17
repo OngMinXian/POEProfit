@@ -1,111 +1,184 @@
 <div>
-  <!-- 🔹 Top bar -->
-  <header class="top-bar">
-    <div class="logo">POE Profit</div>
-  </header>
-
-  <div class="background">
-
-    <div class="overlay"></div>
-    
-    <!-- 🔹 Main content panel -->
-    <div class="content-panel">
-      <div class="content-container">
-
-        <button class="back-button" (click)="goBack()">
-          ← Back
-        </button>
-
-        <h2>{{ boss?.name }}</h2>
-
-        <div class="table-wrapper">
-        <table class="bosses-table">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (cost of boss?.costs; track cost.name) {
-              <tr>
-                <td>
-                  <img 
-                    [src]="cost.icon" 
-                    alt="{{ cost.name }}" 
-                    class="item-icon"
-                  />
-                  {{ cost.name }}
-                </td>
-                <td>
-                  {{ cost.chaosValue | number : '1.0-0' }}
-                  <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                </td>
-                <td>{{ cost.quantity }}</td>
-                <td>
-                  {{ cost.totalCost | number : '1.0-0' }}
-                  <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-        </div>
-
-        <div class="table-wrapper">
-        <table class="bosses-table">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Price</th>
-              <th>Drop Rate</th>
-              <th>Expected Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (reward of boss?.rewards; track reward.name) {
-              <tr>
-                <td>
-                  <img 
-                    [src]="reward.icon" 
-                    alt="{{ reward.name }}" 
-                    class="item-icon"
-                  />
-                  {{ reward.name }}
-                </td>
-                <td>
-                  {{ reward.chaosValue | number : '1.0-0' }}
-                  <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                </td>
-                <td>{{ reward.probability | number:'1.1-1' }}%</td>
-                <td>
-                  {{ reward.expectedValue | number : '1.0-0' }}
-                  <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-</div>
+   <header class="top-bar">
+      <div class="logo">POE Profit</div>
+   </header>
+   <div class="background">
+      <div class="overlay"></div>
+      @if (boss) {
+      <div class="boss-top-content-panel">
+         <div class="boss-top-content-container">
+            <div class="boss-top-content-left-container">
+               <div class="boss-top-content-icons">
+                  <button (click)="goBack()" title="Back">
+                     <mat-icon>keyboard_double_arrow_left</mat-icon>
+                  </button>
+                  <a 
+                     [href]="boss.wikiUrl"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="Wiki"
+                     >
+                     <mat-icon>info</mat-icon>
+                  </a>
+               </div>
+               <div class="boss-name-container">
+                  <h2 class="boss-name">{{ boss.name }}</h2>
+               </div>
+               <div class="boss-summary-container">
+                  <div class="boss-info-card">
+                     <h4 class="boss-card-label">Cost</h4>
+                     <h3 class="boss-card-value">
+                        {{ boss.costInChaos | number : '1.0-0' }}
+                        <img 
+                           [src]="'chaos-orb.png'"
+                           alt="Chaos Orb" 
+                           class="item-icon"
+                           />
+                     </h3>
+                  </div>
+                  <div class="boss-info-card">
+                     <h4 class="boss-card-label">Value</h4>
+                     <h3 class="boss-card-value">
+                        {{ boss.expectedValueInChaos | number : '1.0-0' }}
+                        <img 
+                           [src]="'chaos-orb.png'"
+                           alt="Chaos Orb" 
+                           class="item-icon"
+                           />
+                     </h3>
+                  </div>
+                  <div  class="boss-info-card">
+                     <h4 class="boss-card-label">Profit</h4>
+                     <h3 class="boss-card-value">
+                        {{ boss.profitInChaos | number : '1.0-0' }}
+                        <img 
+                           [src]="'chaos-orb.png'"
+                           alt="Chaos Orb" 
+                           class="item-icon"
+                           />
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <div class="boss-top-content-right-container">
+               <img
+               [src]="boss.imageUrl"
+               [alt]="boss.imageUrl"
+               class="boss-image-rect"
+               />
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+      <div class="boss-bottom-content-panel">
+         <div class="boss-bottom-content-container">
+            <h3 class="table-title">Cost Breakdown</h3>
+            <div class="boss-table-wrapper">
+               <table class="boss-table">
+                  <thead>
+                     <tr>
+                        <th class="header-item">Item</th>
+                        <th class="header-currency">Price</th>
+                        <th class="header-currency">Quantity</th>
+                        <th class="header-currency">Total Cost</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     @for (cost of boss.costs; track cost.name) {
+                     <tr>
+                        <td>
+                           <div class="cell-contents-item">
+                              <img 
+                                 [src]="cost.icon" 
+                                 alt="{{ cost.name }}" 
+                                 class="item-icon"
+                                 />
+                              <span class="table-text">
+                              {{ cost.name }}
+                              </span>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ cost.chaosValue | number : '1.0-0' }}
+                              <img
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">{{ cost.quantity }}</div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ cost.totalCost | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                     </tr>
+                     }
+                  </tbody>
+               </table>
+            </div>
+            <h3 class="table-title">Reward List</h3>
+            <div class="boss-table-wrapper">
+               <table class="boss-table">
+                  <thead>
+                     <tr>
+                        <th class="header-item">Item</th>
+                        <th class="header-currency">Price</th>
+                        <th class="header-currency">Drop Rate</th>
+                        <th class="header-currency">Expected Value</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     @for (reward of boss.rewards; track reward.name) {
+                     <tr>
+                        <td >
+                           <div class="cell-contents-item">
+                              <img 
+                                 [src]="reward.icon" 
+                                 alt="{{ reward.name }}" 
+                                 class="item-icon"
+                                 />
+                              {{ reward.name }}
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ reward.chaosValue | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">{{ reward.probability | number:'1.1-1' }}%</div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ reward.expectedValue | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                     </tr>
+                     }
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      }
+   </div>
 </div>

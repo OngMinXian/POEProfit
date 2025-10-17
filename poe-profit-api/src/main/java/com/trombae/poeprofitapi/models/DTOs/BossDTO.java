@@ -17,4 +17,6 @@ public class BossDTO {
     public double profitInChaos;
     public List<Cost> costs;
     public List<Reward> rewards;
+    private String wikiUrl;
+    private String imageUrl;
 }

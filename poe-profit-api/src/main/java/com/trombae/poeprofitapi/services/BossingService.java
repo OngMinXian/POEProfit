@@ -59,7 +59,9 @@ public class BossingService {
                     config.getTotalExpectedValueInChaos(),
                     config.getProfit(),
                     config.getCosts(),
-                    config.getRewards()
+                    config.getRewards(),
+                    config.getWikiUrl(),
+                    config.getImageUrl()
             ));
         }
 

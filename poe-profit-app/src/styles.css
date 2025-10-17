@@ -53,7 +53,7 @@ html, body {
 .content-panel {
   position: relative;
   width: 65%;
-  background-color: rgba(12, 12, 12, 0.9);
+  background-color: rgba(74, 74, 74, 0.335);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   z-index: 2;
   margin-top: 1rem; /* spacing between top bar and panel */
@@ -81,56 +81,7 @@ html, body {
   overflow-x: auto;
 }
 
-.bosses-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #1c1c1c;
-  border-radius: 8px;
-  overflow: hidden;
-  min-width: 600px;
-}
-
-.bosses-table thead {
-  background-color: #222;
-}
-
-.bosses-table th {
-  text-align: left;
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #b0b0b0;
-  border-bottom: 1px solid #333;
-}
-
-.bosses-table td {
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-  border-bottom: 1px solid #2a2a2a;
-}
-
-.bosses-table tbody tr:hover {
-  background-color: #292929;
-  transition: background-color 0.2s ease;
-}
-
-.boss-link {
-  color: #4fc3f7;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.boss-link:hover {
-  color: #81d4fa;
-  text-decoration: underline;
-}
-
-.positive {
-  color: #8bc34a;
-  font-weight: 600;
-}
-
-.negative {
-  color: #e57373;
-  font-weight: 600;
+.item-icon {
+  width: 2.5vw;
+  object-fit: contain;
 }
