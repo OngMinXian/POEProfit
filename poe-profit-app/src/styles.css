@@ -49,39 +49,31 @@ html, body {
   letter-spacing: 0.5px;
 }
 
-/* 🔹 Main content panel */
-.content-panel {
-  position: relative;
-  width: 65%;
-  background-color: rgba(74, 74, 74, 0.335);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  z-index: 2;
-  margin-top: 1rem; /* spacing between top bar and panel */
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 🔹 Table & content styles (unchanged) */
-.content-container {
-  flex: 1;
-  padding: 2rem;
-  color: #e0e0e0;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-
-.content-container h2 {
-  margin-bottom: 1.2rem;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
 .item-icon {
   width: 2.5vw;
   object-fit: contain;
+}
+
+.header-item {
+  text-align: left;
+}
+
+.header-currency {
+  text-align: right;
+}
+
+.cell-contents-currency {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9vw;
+  gap: 0.5vw;
+}
+
+.cell-contents-item {
+display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.9vw;
+  gap: 0.5vw;
 }

@@ -69,7 +69,7 @@
 .boss-name {
   max-width: 45vw;
   font-size: 3vw;
-  font-weight: 900;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: -1px;
   text-shadow: -2px 4px 8px rgba(0,0,0,0.8);
@@ -176,7 +176,7 @@
 .boss-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #1c1c1c;
+  background-color: #1c1c1cca;
   border-radius: 8px;
   overflow: hidden;
   min-width: 600px;
@@ -204,28 +204,4 @@
 .boss-table tbody tr:hover {
   background-color: #292929;
   transition: background-color 0.2s ease;
-}
-
-.header-item {
-  text-align: left;
-}
-
-.header-currency {
-  text-align: right;
-}
-
-.cell-contents-currency {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 0.9vw;
-  gap: 0.5vw;
-}
-
-.cell-contents-item {
-display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 0.9vw;
-  gap: 0.5vw;
 }
