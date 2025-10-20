@@ -60,4 +60,18 @@ export class BossesComponent implements OnInit {
   getSortDirection(column: string): 'asc' | 'desc' | 'unsorted' {
     return this.sortColumn === column ? this.sortDirection : 'unsorted';
   }
+
+  getProfitColor(value: number): string {
+    if (value > 0) {
+      const max = Math.max(...this.bosses.map(b => Math.abs(b.profitInChaos)));
+      const postiveNormalizationConst = Math.min(1, Math.abs(value) / max)
+      const positiveSat = 30 + postiveNormalizationConst * 70;
+      return `hsl(147, ${positiveSat}%, 50%)`;
+    } else {
+      const min = Math.min(...this.bosses.map(b => Math.abs(b.profitInChaos)));
+      const negativeNormalizationConst = Math.min(1, Math.abs(value) / min);
+      const negativeSat = 30 + negativeNormalizationConst * 70;
+      return `hsl(0, ${negativeSat}%, 50%)`;
+    }
+  }
 }

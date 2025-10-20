@@ -92,10 +92,7 @@
                         </td>
                         <td>
                            <div class="cell-contents-currency"
-                                [ngClass]="{
-                                'profit-positive': boss.profitInChaos > 0,
-                                'profit-negative': boss.profitInChaos < 0
-                              }"
+                                [style.color]="getProfitColor(boss.profitInChaos)"
                            >
                               {{ boss.profitInChaos | number : '1.0-0' }}
                               <img 
