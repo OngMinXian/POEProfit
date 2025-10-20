@@ -21,6 +21,10 @@
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+.boss-header {
+
+}
+
 .bosses-title {
   max-width: 45vw;
   font-size: 3vw;
@@ -32,12 +36,13 @@
   text-align: left;
   margin-top: 0;
   margin-bottom: 0;
+  display: inline
 }
 
 .bosses-description {
   font-size: 1vw;
   margin-top: 0;
-  margin-left: 1%;
+  margin-left: 0.2em;
   margin-bottom: 2.5%;
   color: #ffffff;
   text-shadow: -2px 4px 8px rgba(0,0,0,0.8);
