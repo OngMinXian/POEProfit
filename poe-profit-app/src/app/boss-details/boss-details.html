@@ -130,10 +130,38 @@
                <table class="boss-table">
                   <thead>
                      <tr>
-                        <th class="header-item">Item</th>
-                        <th class="header-currency">Price</th>
-                        <th class="header-currency">Drop Rate</th>
-                        <th class="header-currency">Expected Value</th>
+                        <th class="header-item">
+                          <span class="sortable" (click)="sort('name')">
+                            Item
+                            <span class="sort-icon-wrapper" [ngClass]="getSortDirection('name')">
+                              <mat-icon class="sort-icon">unfold_more</mat-icon>
+                            </span>
+                          </span>
+                        </th>
+                        <th class="header-currency">
+                          <span class="sortable" (click)="sort('chaosValue')">
+                            Price
+                            <span class="sort-icon-wrapper" [ngClass]="getSortDirection('chaosValue')">
+                              <mat-icon class="sort-icon">unfold_more</mat-icon>
+                            </span>
+                          </span>
+                        </th>
+                        <th class="header-currency">
+                          <span class="sortable" (click)="sort('probability')">
+                            Drop Rate
+                            <span class="sort-icon-wrapper" [ngClass]="getSortDirection('probability')">
+                              <mat-icon class="sort-icon">unfold_more</mat-icon>
+                            </span>
+                          </span>
+                        </th>
+                        <th class="header-currency">
+                          <span class="sortable" (click)="sort('expectedValue')">
+                            Expected Value
+                            <span class="sort-icon-wrapper" [ngClass]="getSortDirection('expectedValue')">
+                              <mat-icon class="sort-icon">unfold_more</mat-icon>
+                            </span>
+                          </span>
+                        </th>
                      </tr>
                   </thead>
                   <tbody>

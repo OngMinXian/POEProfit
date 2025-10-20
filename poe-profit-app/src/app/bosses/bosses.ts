@@ -22,8 +22,8 @@ interface BossDTO {
 })
 export class BossesComponent implements OnInit {
   bosses: BossDTO[] = [];
-  sortColumn: string = 'profitInChaos';
-  sortDirection: 'asc' | 'desc' = 'asc';
+  sortColumn: string = '';
+  sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
 
   constructor(private http: HttpClient, private router: Router) {}
 

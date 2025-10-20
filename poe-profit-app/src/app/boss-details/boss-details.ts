@@ -41,6 +41,8 @@ interface BossDTO {
 })
 export class BossDetailComponent implements OnInit {
   boss?: BossDTO;
+  sortColumn: string = '';
+  sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private location: Location) {}
 
@@ -48,12 +50,37 @@ export class BossDetailComponent implements OnInit {
     const bossId = this.route.snapshot.paramMap.get('id');
     if (bossId) {
       this.http.get<BossDTO>(`http://localhost:8080/api/bosses/${bossId}`)
-        .subscribe(data => this.boss = data);
+        .subscribe(data => {
+          this.boss = data;
+          this.sort('expectedValue');
+        });
     }
   }
   
   // TODO: Move back to bosses pape
   goBack(): void {
     this.location.back();
+  }
+
+  sort(column: keyof Reward) {
+    if (this.sortColumn === column) {
+      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortColumn = column;
+      this.sortDirection = 'desc';
+    }
+
+    this.boss?.rewards.sort((a, b) => {
+      const valueA = a[column];
+      const valueB = b[column];
+
+      if (valueA < valueB) return this.sortDirection === 'asc' ? -1 : 1;
+      if (valueA > valueB) return this.sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+
+  getSortDirection(column: string): 'asc' | 'desc' | 'unsorted' {
+    return this.sortColumn === column ? this.sortDirection : 'unsorted';
   }
 }
