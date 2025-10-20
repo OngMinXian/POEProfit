@@ -1,71 +1,83 @@
 <div>
-  <!-- 🔹 Top bar -->
-  <header class="top-bar">
-    <div class="logo">POE Profit</div>
-  </header>
-
-  <div class="background">
-
-    <div class="overlay"></div>
-    
-    <!-- 🔹 Main content panel -->
-    <div class="content-panel">
-      <div class="content-container">
-        <h2>Bosses</h2>
-
-        <div class="table-wrapper">
-          <table class="bosses-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Cost</th>
-                <th>Value</th>
-                <th>Profit</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (boss of bosses; track boss.id) {
-                <tr>
-                  <td>
-                    <a [routerLink]="['/bosses', boss.id]" class="boss-link">
-                      {{ boss.name }}
-                    </a>
-                  </td>
-                  <td>
-                    {{ boss.costInChaos | number : '1.0-0' }}
-                    <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                  </td>
-                  <td>
-                    {{ boss.expectedValueInChaos | number : '1.0-0' }}
-                    <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                  </td>
-                  <td
-                    [ngClass]="{
-                      positive: boss.profitInChaos > 0,
-                      negative: boss.profitInChaos < 0
-                    }"
-                  >
-                    {{ boss.profitInChaos | number : '1.0-0' }}
-                    <img 
-                      [src]="'chaos-orb.png'"
-                      alt="Chaos Orb" 
-                      class="item-icon"
-                    />
-                  </td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        </div>
+   <header class="top-bar">
+      <div class="logo">POE Profit</div>
+   </header>
+   <div class="background">
+      <div class="overlay"></div>
+      <div class="bosses-content-panel">
+         <div class="bosses-content-container">
+            <div class="bosses-summary">
+               <div class="boss-header">
+                  <h2 class="bosses-title">Bosses</h2>
+                  <span class="bosses-description">
+                  are tough encounters that drop valuable loot but come with an entry cost.
+                  </span>
+               </div>
+               <p class="bosses-description">
+                  This table shows which boss gives you the <strong style="color: #efcd5c;">best profit per run</strong>.<br>
+                  Profits are estimated using the expected reward value (<span style="color: #98fb98;">drop rate × item price</span>) minus the <span style="color: #ff5555;">cost of the fight</span>.<br>
+                  <strong style="color: #4fc3f7;">Click on each boss</strong> to get more information!
+               </p>
+            </div>
+            <div class="bosses-table-wrapper">
+               <table class="bosses-table">
+                  <thead>
+                     <tr>
+                        <th class="header-item">Name</th>
+                        <th class="header-currency">Cost</th>
+                        <th class="header-currency">Value</th>
+                        <th class="header-currency">Profit</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     @for (boss of bosses; track boss.id) {
+                     <tr (click)="goToBoss(boss.id)" class="boss-clickable-row">
+                        <td>
+                           <div class="cell-contents-item">
+                              <!-- <img
+                                 [src]="boss.icon"
+                                 alt="{{ boss.name }} icon"
+                                 class="item-icon"
+                                 /> -->
+                              {{ boss.name }}
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ boss.costInChaos | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ boss.expectedValueInChaos | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                        <td>
+                           <div class="cell-contents-currency">
+                              {{ boss.profitInChaos | number : '1.0-0' }}
+                              <img 
+                                 [src]="'chaos-orb.png'"
+                                 alt="Chaos Orb" 
+                                 class="item-icon"
+                                 />
+                           </div>
+                        </td>
+                     </tr>
+                     }
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
