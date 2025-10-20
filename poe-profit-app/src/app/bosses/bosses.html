@@ -23,10 +23,30 @@
                <table class="bosses-table">
                   <thead>
                      <tr>
-                        <th class="header-item">Name</th>
-                        <th class="header-currency">Cost</th>
-                        <th class="header-currency">Value</th>
-                        <th class="header-currency">Profit</th>
+                        <th class="header-item" (click)="sort('name')">
+                          Name 
+                          <span class="sort-icon-wrapper" [ngClass]="getSortDirection('name')">
+                            <mat-icon class="sort-icon">unfold_more</mat-icon>
+                          </span>
+                        </th>
+                        <th class="header-currency" (click)="sort('costInChaos')">
+                          Cost 
+                          <span class="sort-icon-wrapper" [ngClass]="getSortDirection('costInChaos')">
+                            <mat-icon class="sort-icon">unfold_more</mat-icon>
+                          </span>
+                        </th>
+                        <th class="header-currency" (click)="sort('expectedValueInChaos')">
+                          Value 
+                          <span class="sort-icon-wrapper" [ngClass]="getSortDirection('expectedValueInChaos')">
+                            <mat-icon class="sort-icon">unfold_more</mat-icon>
+                          </span>
+                        </th>
+                        <th class="header-currency" (click)="sort('profitInChaos')">
+                          Profit 
+                          <span class="sort-icon-wrapper" [ngClass]="getSortDirection('profitInChaos')">
+                            <mat-icon class="sort-icon">unfold_more</mat-icon>
+                          </span>
+                        </th>
                      </tr>
                   </thead>
                   <tbody>
