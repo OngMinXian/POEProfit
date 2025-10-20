@@ -24,6 +24,7 @@ export class BossesComponent implements OnInit {
   bosses: BossDTO[] = [];
   sortColumn: string = '';
   sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
+  showMore: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
