@@ -91,7 +91,12 @@
                            </div>
                         </td>
                         <td>
-                           <div class="cell-contents-currency">
+                           <div class="cell-contents-currency"
+                                [ngClass]="{
+                                'profit-positive': boss.profitInChaos > 0,
+                                'profit-negative': boss.profitInChaos < 0
+                              }"
+                           >
                               {{ boss.profitInChaos | number : '1.0-0' }}
                               <img 
                                  [src]="'chaos-orb.png'"

@@ -49,7 +49,12 @@
                   </div>
                   <div  class="boss-info-card">
                      <h4 class="boss-card-label">Profit</h4>
-                     <h3 class="boss-card-value">
+                     <h3 class="boss-card-value" 
+                           [ngClass]="{
+                                'profit-positive': boss.profitInChaos > 0,
+                                'profit-negative': boss.profitInChaos < 0
+                              }"
+                           >
                         {{ boss.profitInChaos | number : '1.0-0' }}
                         <img 
                            [src]="'chaos-orb.png'"
