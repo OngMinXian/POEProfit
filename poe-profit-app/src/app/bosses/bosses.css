@@ -80,6 +80,10 @@
 }
 
 .bosses-table tbody tr:hover {
-  background-color: #292929;
+  background-color: #313131;
   transition: background-color 0.2s ease;
+}
+
+.boss-clickable-row:hover {
+  cursor: pointer;
 }

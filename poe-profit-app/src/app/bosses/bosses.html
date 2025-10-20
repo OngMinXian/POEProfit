@@ -14,7 +14,8 @@
         <p class="bosses-description">
    are tough encounters that drop valuable loot but come with an entry cost.<br>
   This table shows which boss gives you the <strong style="color: #efcd5c;">best profit per run</strong>.<br>
- Profits are estimated using the expected reward value (<span style="color: #98fb98;">drop rate × item price</span>) minus the <span style="color: #ff5555; font-weight: bold;">cost of the fight</span>.
+ Profits are estimated using the expected reward value (<span style="color: #98fb98;">drop rate × item price</span>) minus the <span style="color: #ff5555; font-weight: bold;">cost of the fight</span>.<br>
+ <strong style="color: #4fc3f7;">Click on each boss</strong> to get more information!
 </p>
         </div>
     
@@ -30,12 +31,15 @@
             </thead>
             <tbody>
               @for (boss of bosses; track boss.id) {
-                <tr>
+                <tr (click)="goToBoss(boss.id)" class="boss-clickable-row">
                   <td>
                     <div class="cell-contents-item">
-                    <a [routerLink]="['/bosses', boss.id]" class="boss-link">
+                      <!-- <img
+        [src]="boss.icon"
+        alt="{{ boss.name }} icon"
+        class="item-icon"
+      /> -->
                       {{ boss.name }}
-                    </a>
                   </div>
                   </td>
                   <td>
