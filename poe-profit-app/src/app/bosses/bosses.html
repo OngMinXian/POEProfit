@@ -91,7 +91,9 @@
                            </div>
                         </td>
                         <td>
-                           <div class="cell-contents-currency">
+                           <div class="cell-contents-currency"
+                                [style.color]="getProfitColor(boss.profitInChaos)"
+                           >
                               {{ boss.profitInChaos | number : '1.0-0' }}
                               <img 
                                  [src]="'chaos-orb.png'"
