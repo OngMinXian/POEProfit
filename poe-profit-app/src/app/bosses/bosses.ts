@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { RouterModule, Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 interface BossDTO {
   name: string;
@@ -15,21 +16,48 @@ interface BossDTO {
 @Component({
   selector: 'app-bosses',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatIconModule],
   templateUrl: './bosses.html',
   styleUrl: './bosses.css'
 })
 export class BossesComponent implements OnInit {
   bosses: BossDTO[] = [];
+  sortColumn: string = '';
+  sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.http.get<BossDTO[]>('http://localhost:8080/api/bosses')
-      .subscribe(data => this.bosses = data);
+      .subscribe(data => {
+        this.bosses = data;
+        this.sort('profitInChaos');
+      });
   }
 
   goToBoss(id: string) {
-  this.router.navigate(['/bosses', id]);
-}
+    this.router.navigate(['/bosses', id]);
+  }
+
+  sort(column: keyof BossDTO) {
+    if (this.sortColumn === column) {
+      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortColumn = column;
+      this.sortDirection = 'desc';
+    }
+
+    this.bosses.sort((a, b) => {
+      const valueA = a[column];
+      const valueB = b[column];
+
+      if (valueA < valueB) return this.sortDirection === 'asc' ? -1 : 1;
+      if (valueA > valueB) return this.sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+
+  getSortDirection(column: string): 'asc' | 'desc' | 'unsorted' {
+    return this.sortColumn === column ? this.sortDirection : 'unsorted';
+  }
 }
