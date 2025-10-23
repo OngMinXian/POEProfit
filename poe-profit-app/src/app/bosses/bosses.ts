@@ -24,6 +24,7 @@ export class BossesComponent implements OnInit {
   bosses: BossDTO[] = [];
   sortColumn: string = '';
   sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
+  showMore: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -65,13 +66,13 @@ export class BossesComponent implements OnInit {
     if (value > 0) {
       const max = Math.max(...this.bosses.map(b => Math.abs(b.profitInChaos)));
       const postiveNormalizationConst = Math.min(1, Math.abs(value) / max)
-      const positiveSat = 30 + postiveNormalizationConst * 70;
-      return `hsl(147, ${positiveSat}%, 50%)`;
+      const positiveSat = 20 + postiveNormalizationConst * 50;
+      return `hsl(147, ${positiveSat}%, 65%)`;
     } else {
       const min = Math.min(...this.bosses.map(b => Math.abs(b.profitInChaos)));
       const negativeNormalizationConst = Math.min(1, Math.abs(value) / min);
-      const negativeSat = 30 + negativeNormalizationConst * 70;
-      return `hsl(0, ${negativeSat}%, 50%)`;
+      const negativeSat = 20 + negativeNormalizationConst * 50;
+      return `hsl(0, ${negativeSat}%, 65%)`;
     }
   }
 }

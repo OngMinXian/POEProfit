@@ -33,7 +33,11 @@ public class POENinjaRepository {
         if (detailsID == null) {
             detailsID = getNameToDetailsIDCache().get(name);
         }
-        return detailsIDToItemCache.get(detailsID).getIcon();
+        String iconUrl = detailsIDToItemCache.get(detailsID).getIcon();
+        if (iconUrl == null) {
+            iconUrl = RepositoryConstants.ICON_ERROR_URL;
+        }
+        return iconUrl;
     }
 
     private HashMap<String, String> getNameToDetailsIDCache() {

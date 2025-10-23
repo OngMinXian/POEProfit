@@ -1,5 +1,6 @@
 package com.trombae.poeprofitapi.models.configs;
 
+import com.trombae.poeprofitapi.constants.RepositoryConstants;
 import com.trombae.poeprofitapi.repositories.POENinjaRepository;
 import com.trombae.poeprofitapi.repositories.POEWatchRepository;
 import lombok.Data;
@@ -25,8 +26,9 @@ public class AbstractConfig {
                 cost.setChaosValue(poeNinjaRepository.getChaosValueOfItem(cost.getName(), cost.getDetailsId()));
                 cost.setIcon(poeNinjaRepository.getIconOfItem(cost.getName(), cost.getDetailsId()));
             } catch (Exception ex) {
-                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName(), ex);
+                log.debug(UNABLE_TO_GET_CHAOS_VALUE_LOG, cost.getName(), ex);
                 cost.setChaosValue(0);
+                cost.setIcon(RepositoryConstants.ICON_ERROR_URL);
             }
         }
     }
@@ -39,8 +41,9 @@ public class AbstractConfig {
                         poeNinjaRepository.getChaosValueOfItem(reward.getName(), reward.getDetailsId()));
                 reward.setIcon(poeNinjaRepository.getIconOfItem(reward.getName(), reward.getDetailsId()));
             } catch (Exception ex) {
-                log.error(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName(), ex);
+                log.debug(UNABLE_TO_GET_CHAOS_VALUE_LOG, reward.getName(), ex);
                 reward.setChaosValue(0);
+                reward.setIcon(RepositoryConstants.ICON_ERROR_URL);
             }
         }
     }

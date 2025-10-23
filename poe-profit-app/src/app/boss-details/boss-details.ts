@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { RouterModule, Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 interface Cost {
@@ -35,7 +36,7 @@ interface BossDTO {
 @Component({
   selector: 'app-boss-details',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatIconModule],
   templateUrl: './boss-details.html',
   styleUrls: ['./boss-details.css'],
 })
@@ -44,7 +45,7 @@ export class BossDetailComponent implements OnInit {
   sortColumn: string = '';
   sortDirection: 'asc' | 'desc' | 'unsorted' = 'unsorted';
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private location: Location) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     const bossId = this.route.snapshot.paramMap.get('id');
@@ -57,9 +58,8 @@ export class BossDetailComponent implements OnInit {
     }
   }
   
-  // TODO: Move back to bosses pape
   goBack(): void {
-    this.location.back();
+    this.router.navigate(['/bosses']);
   }
 
   sort(column: keyof Reward) {
