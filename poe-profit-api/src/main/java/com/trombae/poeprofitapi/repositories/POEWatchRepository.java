@@ -10,23 +10,32 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 @Component
 public class POEWatchRepository {
     protected static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private HashMap<String, Double> itemNameToChaosValueCache = new HashMap<>();
+    private HashMap<String, HashMap<Integer, Double>> itemNameToLevelToChaosValueCache = new HashMap<>();
+    private static final Integer ITEM_NO_LEVEL_VALUE = -1;
 
     public double getChaosValueOfItem(String name) {
-        if (itemNameToChaosValueCache.containsKey(name)) {
-            return itemNameToChaosValueCache.get(name);
+        if (!itemNameToLevelToChaosValueCache.containsKey(name)) {
+            itemNameToLevelToChaosValueCache.put(name, new HashMap<>());
         }
+        if (!itemNameToLevelToChaosValueCache.get(name).containsKey(ITEM_NO_LEVEL_VALUE)) {
+            double chaosPrice = getAndParseChaosValueOfItemFromClient(name);
+            itemNameToLevelToChaosValueCache.get(name).put(ITEM_NO_LEVEL_VALUE, chaosPrice);
+        }
+        return itemNameToLevelToChaosValueCache.get(name).get(ITEM_NO_LEVEL_VALUE);
+    }
 
-        JsonNode itemNode = POEWatchClient.getItem(name).get(0);
+    private double getAndParseChaosValueOfItemFromClient(String name) {
+        JsonNode itemNode = null;
         try {
+             itemNode = POEWatchClient.getItem(name).get(0);
             POEWatchItem item = objectMapper.readValue(itemNode.toString(), POEWatchItem.class);
-            itemNameToChaosValueCache.put(name, item.getMean());
             return item.getMean();
         } catch (Exception ex) {
             log.error("Unable to parse item Json data: {}", itemNode, ex);
@@ -34,25 +43,32 @@ public class POEWatchRepository {
         }
     }
 
-    // TODO: Clean up name + level work around
     public double getChaosValueOfItem(String name, Integer level) {
         if (level == null) {
             return getChaosValueOfItem(name);
         }
-
-        String nameAndLevel = name + level;
-
-        if (itemNameToChaosValueCache.containsKey(nameAndLevel)) {
-            return itemNameToChaosValueCache.get(nameAndLevel);
+        if (!itemNameToLevelToChaosValueCache.containsKey(name)) {
+            itemNameToLevelToChaosValueCache.put(name, new HashMap<>());
         }
+        if (!itemNameToLevelToChaosValueCache.get(name).containsKey(level)) {
+            double chaosPrice = getAndParseChaosValueOfItemFromClient(name, level);
+            itemNameToLevelToChaosValueCache.get(name).put(level, chaosPrice);
+        }
+        return itemNameToLevelToChaosValueCache.get(name).get(level);
+    }
 
-        JsonNode itemArray = POEWatchClient.getItem(name);
+    private double getAndParseChaosValueOfItemFromClient(String name, Integer level) {
+        JsonNode itemArray = null;
         try {
+            itemArray = POEWatchClient.getItem(name);
             POEWatchItem item = null;
             for (JsonNode itemNode : itemArray) {
                 item = objectMapper.readValue(itemNode.toString(), POEWatchItem.class);
                 if (item.getItemLevel() == level) {
-                    itemNameToChaosValueCache.put(nameAndLevel, item.getMean());
+                    if (!itemNameToLevelToChaosValueCache.containsKey(name)) {
+                        itemNameToLevelToChaosValueCache.put(name, new HashMap<>());
+                    }
+                    itemNameToLevelToChaosValueCache.get(name).put(level, item.getMean());
                     break;
                 }
             }
@@ -65,8 +81,18 @@ public class POEWatchRepository {
 
     @Scheduled(fixedRate = RepositoryConstants.CACHE_DURATION, initialDelay = RepositoryConstants.CACHE_DURATION)
     private void refreshCache() {
-        // TODO: Do not clear prices of items that cannot be retrieved
         log.info("Refreshing POE Watch Repository Cache");
-        itemNameToChaosValueCache = new HashMap<>();
+        for (Map.Entry<String, HashMap<Integer, Double>> nameToLevel : itemNameToLevelToChaosValueCache.entrySet()) {
+            String name = nameToLevel.getKey();
+            for (Map.Entry<Integer, Double> levelToChaosValue : nameToLevel.getValue().entrySet()) {
+                Integer level = levelToChaosValue.getKey();
+                double newChaosValue = level == ITEM_NO_LEVEL_VALUE ?
+                        getAndParseChaosValueOfItemFromClient(name) :
+                        getAndParseChaosValueOfItemFromClient(name, level);
+                if (newChaosValue != 0) {
+                    itemNameToLevelToChaosValueCache.get(name).put(level, newChaosValue);
+                }
+            }
+        }
     }
 }
