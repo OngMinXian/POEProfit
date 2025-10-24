@@ -1,6 +1,8 @@
 {
-  "name": "Uber Sirius",
+  "name": "Sirius, Awakener of Worlds (Uber)",
   "id": "uberSirius",
+  "wikiUrl": "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds",
+  "imageUrl": "sirius.jpg",
   "costs": [
     {
       "name": "Awakening Fragment",
@@ -9,34 +11,34 @@
   ],
   "rewards": [
     {
-      "name": "Awakener's Orb",
-      "probability": 15.0
+      "name": "Thread of Hope",
+      "probability": 55.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Thread of Hope"
     },
     {
-      "name": "Orb of Dominance",
-      "probability": 5.0
+      "name": "The Tempest Rising",
+      "probability": 37.0
     },
     {
       "name": "Oriath's End",
-      "probability": 9.0
+      "probability": 7.5
     },
     {
       "name": "The Saviour",
       "probability": 1.0
     },
     {
-      "name": "Thread of Hope",
-      "probability": 75.0,
-      "unidentified": true,
-      "poeWatchName": "Unidentified Thread of Hope"
+      "name": "Awakener's Orb",
+      "probability": 20.0
     },
     {
-      "name": "The Tempest Rising",
-      "probability": 35.0
+      "name": "Orb of Dominance",
+      "probability": 5.0
     },
     {
       "name": "A Fate Worse Than Death",
-      "probability": 5.0
+      "probability": 8.0
     }
   ]
 }

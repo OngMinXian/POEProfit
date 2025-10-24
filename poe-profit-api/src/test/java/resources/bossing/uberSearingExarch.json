@@ -1,6 +1,8 @@
 {
-  "name": "Uber Searing Exarch",
+  "name": "The Searing Exarch (Uber)",
   "id": "uberSearingExarch",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Searing_Exarch",
+  "imageUrl": "theSearingExarch.jpg",
   "costs": [
     {
       "name": "Blazing Fragment",
@@ -9,6 +11,22 @@
   ],
   "rewards": [
     {
+      "name": "The Annihilating Light",
+      "probability": 45.5
+    },
+    {
+      "name": "Annihilation's Approach",
+      "probability": 29.0
+    },
+    {
+      "name": "Crystallised Omniscience",
+      "probability": 24.0
+    },
+    {
+      "name": "The Celestial Brace",
+      "probability": 1.5
+    },
+    {
       "name": "Forbidden Flame",
       "probability": 5.0,
       "unidentified": true,
@@ -16,23 +34,19 @@
       "level": 86
     },
     {
-      "name": "The Celestial Brace",
-      "probability": 1.0
+      "name": "Curio of Absorption",
+      "probability": 5.0
     },
     {
       "name": "Exceptional Eldritch Ember",
       "probability": 15.0
     },
     {
-      "name": "Annihilation's Approach",
-      "probability": 4.0
-    },
-    {
-      "name": "Eldritch Chaos Orb",
+      "name": "Eldritch Orb of Annulment",
       "probability": 5.0
     },
     {
-      "name": "Eldritch Orb of Annulment",
+      "name": "Eldritch Chaos Orb",
       "probability": 5.0
     },
     {
@@ -40,20 +54,8 @@
       "probability": 5.0
     },
     {
-      "name": "Annihilation's Approach",
-      "probability": 25.0
-    },
-    {
-      "name": "Crystallised Omniscience",
-      "probability": 33.0
-    },
-    {
-      "name": "The Annihilating Light",
-      "probability": 41.0
-    },
-    {
-      "name": "Curio of Absorption",
-      "probability": 5.0
+      "name": "Auspicious Ambitions",
+      "probability": 1.0
     }
   ]
 }

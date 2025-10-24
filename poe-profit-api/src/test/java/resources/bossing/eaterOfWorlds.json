@@ -1,6 +1,8 @@
 {
-  "name": "Eater of Worlds",
+  "name": "The Eater of Worlds",
   "id": "eaterOfWorlds",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Eater_of_Worlds",
+  "imageUrl": "theEaterOfWorlds.jpg",
   "costs": [
     {
       "name": "Screaming Invitation",
@@ -8,6 +10,18 @@
     }
   ],
   "rewards": [
+    {
+      "name": "Inextricable Fate",
+      "probability": 63.0
+    },
+    {
+      "name": "The Gluttonous Tide",
+      "probability": 33.0
+    },
+    {
+      "name": "Melding of the Flesh",
+      "probability": 4
+    },
     {
       "name": "Forbidden Flesh",
       "probability": 5.0,
@@ -20,23 +34,11 @@
       "probability": 15.0
     },
     {
-      "name": "Melding of the Flesh",
-      "probability": 2
-    },
-    {
-      "name": "The Gluttonous Tide",
-      "probability": 50.0
-    },
-    {
-      "name": "Inextricable Fate",
-      "probability": 50.0
-    },
-    {
-      "name": "Eldritch Chaos Orb",
+      "name": "Eldritch Orb of Annulment",
       "probability": 5.0
     },
     {
-      "name": "Eldritch Orb of Annulment",
+      "name": "Eldritch Chaos Orb",
       "probability": 5.0
     },
     {

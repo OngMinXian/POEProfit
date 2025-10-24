@@ -1,6 +1,8 @@
 {
   "name": "Venarius",
   "id": "venarius",
+  "wikiUrl": "https://www.poewiki.net/wiki/Venarius",
+  "imageUrl": "venarius.jpg",
   "costs": [
     {
       "name": "Cortex",
@@ -9,24 +11,24 @@
   ],
   "rewards": [
     {
-      "name": "Garb of the Ephemeral",
-      "probability": 8.0
-    },
-    {
-      "name": "Bottled Faith",
-      "probability": 2.0
+      "name": "Offering to the Serpent",
+      "probability": 43.0
     },
     {
       "name": "Perepiteia",
-      "probability": 45.0
+      "probability": 43.0
     },
     {
-      "name": "Offering to the Serpent",
-      "probability": 45.0
+      "name": "Garb of the Ephemeral",
+      "probability": 10.0
+    },
+    {
+      "name": "Bottled Faith",
+      "probability": 4.0
     },
     {
       "name": "The Hook",
-      "probability": 5.0
+      "probability": 3.0
     }
   ]
 }

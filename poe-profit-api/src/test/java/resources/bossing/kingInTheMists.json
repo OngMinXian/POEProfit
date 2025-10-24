@@ -1,6 +1,8 @@
 {
-  "name": "King in the Mists",
+  "name": "The King in the Mists",
   "id": "kingInTheMists",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_King_in_the_Mists",
+  "imageUrl": "theKingInTheMists.jpg",
   "costs": [
     {
       "name": "An Audience With The King",
@@ -9,18 +11,18 @@
   ],
   "rewards": [
     {
-      "name": "The Light of Meaning",
-      "probability": 20.0,
-      "unidentified": true,
-      "poeWatchName": "Unidentified The Light of Meaning"
+      "name": "Pragmatism",
+      "probability": 50.0
     },
     {
       "name": "The Untouched Soul",
       "probability": 35.0
     },
     {
-      "name": "Pragmatism",
-      "probability": 50.0
+      "name": "The Light of Meaning",
+      "probability": 20.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified The Light of Meaning"
     },
     {
       "name": "The Burden of Shadows",

@@ -1,6 +1,8 @@
 {
-  "name": "Uber Uber Elder",
+  "name": "The Elder (Uber Uber)",
   "id": "uberUberElder",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)",
+  "imageUrl": "theUberElder.jpg",
   "costs": [
     {
       "name": "Decaying Fragment",
@@ -9,10 +11,59 @@
   ],
   "rewards": [
     {
+      "name": "Call of the Void",
+      "probability": 50.0
+    },
+    {
+      "name": "The Devourer of Minds",
+      "probability": 25.0
+    },
+    {
+      "name": "Soul Ascension",
+      "probability": 11.0
+    },
+    {
+      "name": "Impresence (Fire)",
+      "detailsId": "impresence-fire-onyx-amulet",
+      "probability": 1.4
+    },
+    {
+      "name": "Impresence (Chaos)",
+      "detailsId": "impresence-chaos-onyx-amulet",
+      "probability": 1.4
+    },
+    {
+      "name": "Impresence (Physical)",
+      "detailsId": "impresence-physical-onyx-amulet",
+      "probability": 1.4
+    },
+    {
+      "name": "Impresence (Lightning)",
+      "detailsId": "impresence-lightning-onyx-amulet",
+      "probability": 1.4
+    },
+    {
+      "name": "Impresence (Cold)",
+      "detailsId": "impresence-cold-onyx-amulet",
+      "probability": 1.4
+    },
+    {
+      "name": "The Eternity Shroud",
+      "probability": 4.0
+    },
+    {
+      "name": "Voidforge",
+      "probability": 3.0
+    },
+    {
       "name": "Sublime Vision",
-      "probability": 2.5,
+      "probability": 1.0,
       "unidentified": true,
       "poeWatchName": "Unidentified Sublime Vision"
+    },
+    {
+      "name": "Curio of Decay",
+      "probability": 5.0
     },
     {
       "name": "Watcher's Eye",
@@ -21,73 +72,24 @@
       "poeWatchName": "Unidentified Watcher's Eye 86"
     },
     {
-      "name": "Elder's Exalted Orb",
+      "name": "Shaper's Exalted Orb",
       "probability": 15.0
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 10.0
     },
     {
       "name": "Orb of Dominance",
       "probability": 5.0
     },
     {
-      "name": "Shaper's Exalted Orb",
-      "probability": 15.0
-    },
-    {
-      "name": "Soul Ascension",
-      "probability": 10.0
-    },
-    {
-      "name": "Call of the Void",
-      "probability": 50.0
-    },
-    {
-      "name": "Voidforge",
+      "name": "Void of the Elements",
       "probability": 1.0
     },
     {
-      "name": "The Devourer of Minds",
-      "probability": 30.0
-    },
-    {
-      "name": "The Eternity Shroud",
-      "probability": 9.0
-    },
-    {
-      "name": "The Gulf",
-      "probability": 4.0
-    },
-    {
-      "name": "Curio of Decay",
-      "probability": 5.0
-    },
-    {
-      "name": "Void of the Elements",
-      "probability": 4.0
-    },
-    {
-      "name": "Impresence (Fire)",
-      "detailsId": "impresence-fire-onyx-amulet",
-      "probability": 4.0
-    },
-    {
-      "name": "Impresence (Chaos)",
-      "detailsId": "impresence-chaos-onyx-amulet",
-      "probability": 4.0
-    },
-    {
-      "name": "Impresence (Physical)",
-      "detailsId": "impresence-physical-onyx-amulet",
-      "probability": 4.0
-    },
-    {
-      "name": "Impresence (Lightning)",
-      "detailsId": "impresence-lightning-onyx-amulet",
-      "probability": 4.0
-    },
-    {
-      "name": "Impresence (Cold)",
-      "detailsId": "impresence-cold-onyx-amulet",
-      "probability": 4.0
+      "name": "Auspicious Ambitions",
+      "probability": 1.0
     }
   ]
 }

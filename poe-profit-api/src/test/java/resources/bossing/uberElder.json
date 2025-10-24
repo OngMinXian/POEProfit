@@ -1,6 +1,8 @@
 {
-  "name": "Uber Elder",
+  "name": "The Elder (Uber)",
   "id": "uberElder",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)",
+  "imageUrl": "theUberElder.jpg",
   "costs": [
     {
       "name": "Fragment of Knowledge",
@@ -21,49 +23,49 @@
   ],
   "rewards": [
     {
+      "name": "Mark of the Shaper",
+      "probability": 37.0
+    },
+    {
+      "name": "Mark of the Elder",
+      "probability": 37.0
+    },
+    {
+      "name": "Voidfletcher",
+      "probability": 13.0
+    },
+    {
+      "name": "Indigon",
+      "probability": 10.0
+    },
+    {
+      "name": "Disintegrator",
+      "probability": 3.0
+    },
+    {
       "name": "Watcher's Eye",
       "probability": 35.0,
       "unidentified": true,
       "poeWatchName": "Unidentified Watcher's Eye 86"
     },
     {
-      "name": "Elder's Exalted Orb",
+      "name": "Shaper's Exalted Orb",
       "probability": 15.0
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 10.0
     },
     {
       "name": "Orb of Dominance",
       "probability": 5.0
     },
     {
-      "name": "Shaper's Exalted Orb",
-      "probability": 15.0
-    },
-    {
-      "name": "Mark of the Elder",
-      "probability": 35.0
-    },
-    {
-      "name": "Mark of the Shaper",
-      "probability": 35.0
-    },
-    {
-      "name": "Indigon",
-      "probability": 4.0
-    },
-    {
-      "name": "The Gulf",
-      "probability": 4.0
-    },
-    {
-      "name": "Voidfletcher",
-      "probability": 25.0
-    },
-    {
       "name": "Void of the Elements",
-      "probability": 4.0
+      "probability": 1.0
     },
     {
-      "name": "Disintegrator",
+      "name": "Auspicious Ambitions",
       "probability": 1.0
     }
   ]
