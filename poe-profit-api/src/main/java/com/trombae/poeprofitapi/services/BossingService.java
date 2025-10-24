@@ -6,6 +6,7 @@ import com.trombae.poeprofitapi.models.configs.BossingConfig;
 import com.trombae.poeprofitapi.repositories.POENinjaRepository;
 import com.trombae.poeprofitapi.repositories.POEWatchRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -18,15 +19,17 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class BossingService {
+    @Autowired
     private POENinjaRepository poeNinjaRepository;
+    @Autowired
     private POEWatchRepository poeWatchRepository;
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     private final String BOSSING_CONFIG_DIR = "/opt/trombae/bossing/";
 
-    public BossingService() {
-        this.poeNinjaRepository = new POENinjaRepository();
-        this.poeWatchRepository = new POEWatchRepository();
+    public BossingService(POENinjaRepository poeNinjaRepository, POEWatchRepository poeWatchRepository) {
+        this.poeNinjaRepository = poeNinjaRepository;
+        this.poeWatchRepository = poeWatchRepository;
     }
 
     private BossingConfig getBossingConfig(File bossConfigFile) {
