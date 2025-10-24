@@ -1,0 +1,59 @@
+{
+  "name": "Catarina, Master of Undeath",
+  "id": "catarina",
+  "wikiUrl": "https://www.poewiki.net/wiki/Catarina,_Master_of_Undeath",
+  "imageUrl": "catarina.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9DYXRhcmluYVRva2VuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0e5b93fca4/CatarinaToken.png",
+  "costs": [
+    {
+      "name": "Syndicate Medallion",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Cinderswallow Urn",
+      "probability": 32.0
+    },
+    {
+      "name": "Spinehail",
+      "probability": 20.0
+    },
+    {
+      "name": "The Devouring Diadem",
+      "probability": 15.0
+    },
+    {
+      "name": "Bitterbind Point",
+      "probability": 10.0
+    },
+    {
+      "name": "The Queen's Hunger",
+      "probability": 6.0
+    },
+    {
+      "name": "Cane of Kulemak",
+      "probability": 17.0
+    },
+    {
+      "name": "Veiled Exalted Orb",
+      "probability": 25.0
+    },
+    {
+      "name": "Allflame Ember of Resplendence",
+      "probability": 60.0
+    },
+    {
+      "name": "Allflame Ember of Kulemak",
+      "probability": 60.0
+    },
+    {
+      "name": "Allflame Ember of Propagation",
+      "probability": 30.0
+    },
+    {
+      "name": "Nook's Crown",
+      "probability": 0.5
+    }
+  ]
+}

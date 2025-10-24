@@ -1,6 +1,9 @@
 {
   "name": "Incarnation of Fear",
   "id": "incartionOfFear",
+  "wikiUrl": "https://www.poewiki.net/wiki/Incarnation_of_Fear",
+  "imageUrl": "incarnationOfFear.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BbmdlckJvc3NNZW1vcnlLZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ae34835f3f/AngerBossMemoryKey.png",
   "costs": [
     {
       "name": "Echo of Trauma",
@@ -9,28 +12,28 @@
   ],
   "rewards": [
     {
-      "name": "Orb of Intention",
-      "probability": 33.0
-    },
-    {
-      "name": "Enmity's Embrace",
-      "probability": 80.0
-    },
-    {
-      "name": "Coiling Whisper",
-      "probability": 40.0
-    },
-    {
       "name": "Servant of Decay",
       "probability": 50.0
     },
     {
-      "name": "Bound by Destiny",
-      "probability": 8.5
+      "name": "Coiling Whisper",
+      "probability": 38.0
+    },
+    {
+      "name": "Enmity's Embrace",
+      "probability": 10.0
     },
     {
       "name": "Starcaller",
       "probability": 2.0
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 10
+    },
+    {
+      "name": "Orb of Intention",
+      "probability": 50.0
     }
   ]
 }

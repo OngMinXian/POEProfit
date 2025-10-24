@@ -1,0 +1,39 @@
+{
+  "name": "Oshabi, Avatar of the Grove",
+  "id": "oshabi",
+  "wikiUrl": "https://www.poewiki.net/wiki/Oshabi,_Avatar_of_the_Grove",
+  "imageUrl": "oshabi.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Pc2hhYmlNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/87c4ab4747/OshabiMap.png",
+  "costs": [
+    {
+      "name": "Sacred Blossom",
+      "quantity": 1
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Sacred Crystallised Lifeforce",
+      "probability": 100.0
+    },
+    {
+      "name": "The Aspirant",
+      "probability": 10.0
+    },
+    {
+      "name": "Forbidden Shako",
+      "probability": 52.0
+    },
+    {
+      "name": "Law of the Wilds",
+      "probability": 20.0
+    },
+    {
+      "name": "Witchhunter's Judgment",
+      "probability": 16.0
+    },
+    {
+      "name": "Abhorrent Interrogation",
+      "probability": 12.0
+    }
+  ]
+}

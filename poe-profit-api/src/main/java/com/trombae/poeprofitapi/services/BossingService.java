@@ -61,7 +61,8 @@ public class BossingService {
                     config.getCosts(),
                     config.getRewards(),
                     config.getWikiUrl(),
-                    config.getImageUrl()
+                    config.getImageUrl(),
+                    config.getIcon()
             ));
         }
 

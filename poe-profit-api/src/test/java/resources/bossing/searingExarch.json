@@ -1,6 +1,9 @@
 {
-  "name": "Searing Exarch",
+  "name": "The Searing Exarch",
   "id": "searingExarch",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Searing_Exarch",
+  "imageUrl": "theSearingExarch.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9DbGVhbnNpbmdGaXJlT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e6f9234053/CleansingFireOrbQuest5.png",
   "costs": [
     {
       "name": "Incandescent Invitation",
@@ -8,6 +11,18 @@
     }
   ],
   "rewards": [
+    {
+      "name": "Dawnbreaker",
+      "probability": 61.0
+    },
+    {
+      "name": "Dawnstrider",
+      "probability": 37.0
+    },
+    {
+      "name": "Dissolution of the Flesh",
+      "probability": 2.0
+    },
     {
       "name": "Forbidden Flame",
       "probability": 5.0,
@@ -20,28 +35,20 @@
       "probability": 15.0
     },
     {
-      "name": "Dawnbreaker",
-      "probability": 75.0
-    },
-    {
-      "name": "Dissolution of the Flesh",
-      "probability": 4.0
+      "name": "Eldritch Orb of Annulment",
+      "probability": 5.0
     },
     {
       "name": "Eldritch Chaos Orb",
       "probability": 5.0
     },
     {
-      "name": "Dawnstrider",
-      "probability": 20.0
-    },
-    {
-      "name": "Eldritch Orb of Annulment",
-      "probability": 5.0
-    },
-    {
       "name": "Eldritch Exalted Orb",
       "probability": 5.0
+    },
+    {
+      "name": "Auspicious Ambitions",
+      "probability": 1.0
     }
   ]
 }

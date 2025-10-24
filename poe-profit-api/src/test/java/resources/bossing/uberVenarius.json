@@ -1,6 +1,9 @@
 {
   "name": "Uber Venarius",
   "id": "uberVenarius",
+  "wikiUrl": "https://www.poewiki.net/wiki/Venarius",
+  "imageUrl": "venarius.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUNvcnRleCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/210227ccfc/UberBossKeyCortex.png",
   "costs": [
     {
       "name": "Synthesising Fragment",
@@ -9,28 +12,28 @@
   ],
   "rewards": [
     {
-      "name": "The Apostate",
-      "probability": 43.0
-    },
-    {
-      "name": "Rational Doctrine",
-      "probability": 2.0
-    },
-    {
       "name": "Mask of the Tribunal",
-      "probability": 40.0
+      "probability": 37.0
     },
     {
       "name": "Nebulis",
-      "probability": 33.0
+      "probability": 32.5
     },
     {
       "name": "Circle of Ambition",
-      "probability": 17.0
+      "probability": 20.5
+    },
+    {
+      "name": "The Apostate",
+      "probability": 6.0
+    },
+    {
+      "name": "Rational Doctrine",
+      "probability": 4.0
     },
     {
       "name": "The Hook",
-      "probability": 5.0
+      "probability": 3.0
     }
   ]
 }

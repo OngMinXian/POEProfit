@@ -1,6 +1,9 @@
 {
   "name": "Incarnation of Neglect",
   "id": "incartionOfNeglect",
+  "wikiUrl": "https://www.poewiki.net/wiki/Incarnation_of_Neglect",
+  "imageUrl": "incarnationOfNeglect.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9JZ25vcmFuY2VCb3NzTWVtb3J5S2V5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b9c6e453c2/IgnoranceBossMemoryKey.png",
   "costs": [
     {
       "name": "Echo of Loneliness",
@@ -9,28 +12,28 @@
   ],
   "rewards": [
     {
-      "name": "Orb of Remembrance",
-      "probability": 33.0
-    },
-    {
       "name": "Betrayal's Sting",
-      "probability": 50.0
-    },
-    {
-      "name": "Venarius' Astrolabe",
-      "probability": 10.0
-    },
-    {
-      "name": "Bound by Destiny",
-      "probability": 8.5
+      "probability": 52.0
     },
     {
       "name": "The Arkhon's Tools",
       "probability": 37.0
     },
     {
+      "name": "Venarius' Astrolabe",
+      "probability": 9.5
+    },
+    {
       "name": "Legacy of the Rose",
       "probability": 1.5
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 9.0
+    },
+    {
+      "name": "Orb of Remembrance",
+      "probability": 33.0
     },
     {
       "name": "Monochrome",

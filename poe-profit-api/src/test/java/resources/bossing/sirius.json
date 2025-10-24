@@ -1,6 +1,9 @@
 {
-  "name": "Sirius",
+  "name": "Sirius, Awakener of Worlds",
   "id": "sirius",
+  "wikiUrl": "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds",
+  "imageUrl": "sirius.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaXJ1c0ZyYWdtZW50Q29tcGxldGUiLCJzY2FsZSI6MX1d/c585a0ae79/SirusFragmentComplete.png",
   "costs": [
     {
       "name": "Baran's Crest",
@@ -21,34 +24,34 @@
   ],
   "rewards": [
     {
+      "name": "Crown of the Inward Eye",
+      "probability": 35.0
+    },
+    {
+      "name": "Hands of the High Templar",
+      "probability": 29.0
+    },
+    {
+      "name": "The Burden of Truth",
+      "probability": 28.0
+    },
+    {
+      "name": "Thread of Hope",
+      "probability": 7.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Thread of Hope"
+    },
+    {
       "name": "Awakener's Orb",
-      "probability": 15.0
+      "probability": 20.0
     },
     {
       "name": "Orb of Dominance",
       "probability": 5.0
     },
     {
-      "name": "Crown of the Inward Eye",
-      "probability": 38.0
-    },
-    {
-      "name": "Hands of the High Templar",
-      "probability": 45.0
-    },
-    {
-      "name": "Thread of Hope",
-      "probability": 2.0,
-      "unidentified": true,
-      "poeWatchName": "Unidentified Thread of Hope"
-    },
-    {
-      "name": "The Burden of Truth",
-      "probability": 15.0
-    },
-    {
       "name": "A Fate Worse Than Death",
-      "probability": 5.0
+      "probability": 8.0
     }
   ]
 }

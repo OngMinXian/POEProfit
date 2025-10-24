@@ -1,6 +1,9 @@
 {
-  "name": "Shaper",
+  "name": "The Shaper",
   "id": "shaper",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Shaper",
+  "imageUrl": "theShaper.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaGFwZXJDb21wbGV0ZSIsInNjYWxlIjoxfV0/ace686004d/ShaperComplete.png",
   "costs": [
     {
       "name": "Fragment of the Chimera",
@@ -21,22 +24,6 @@
   ],
   "rewards": [
     {
-      "name": "Fragment of Knowledge",
-      "probability": 50.0
-    },
-    {
-      "name": "Fragment of Shape",
-      "probability": 50.0
-    },
-    {
-      "name": "Shaper's Exalted Orb",
-      "probability": 12.0
-    },
-    {
-      "name": "Orb of Dominance",
-      "probability": 5.0
-    },
-    {
       "name": "Shaper's Touch",
       "probability": 56.0
     },
@@ -51,6 +38,22 @@
     {
       "name": "Dying Sun",
       "probability": 3.0
+    },
+    {
+      "name": "Fragment of Shape",
+      "probability": 50.0
+    },
+    {
+      "name": "Fragment of Knowledge",
+      "probability": 50.0
+    },
+    {
+      "name": "Shaper's Exalted Orb",
+      "probability": 12.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 5.0
     }
   ]
 }

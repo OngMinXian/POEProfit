@@ -19,4 +19,5 @@ public class BossDTO {
     public List<Reward> rewards;
     private String wikiUrl;
     private String imageUrl;
+    private String icon;
 }

@@ -1,6 +1,9 @@
 {
-  "name": "Elder",
+  "name": "The Elder",
   "id": "elder",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Elder",
+  "imageUrl": "theElder.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FbGRlckNvbXBsZXRlIiwic2NhbGUiOjF9XQ/6db44597fe/ElderComplete.png",
   "costs": [
     {
       "name": "Fragment of Purification",
@@ -49,20 +52,6 @@
       "probability": 10.0
     },
     {
-      "name": "Elder's Exalted Orb",
-      "probability": 10.0
-    },
-    {
-      "name": "Orb of Dominance",
-      "probability": 2.0
-    },
-    {
-      "name": "Watcher's Eye",
-      "probability": 40.0,
-      "unidentified": true,
-      "poeWatchName": "Unidentified Watcher's Eye 85"
-    },
-    {
       "name": "Impresence (Fire)",
       "detailsId": "impresence-fire-onyx-amulet",
       "probability": 4.0
@@ -86,6 +75,24 @@
       "name": "Impresence (Cold)",
       "detailsId": "impresence-cold-onyx-amulet",
       "probability": 4.0
+    },
+    {
+      "name": "Elder's Exalted Orb",
+      "probability": 10.0
+    },
+    {
+      "name": "Orb of Dominance",
+      "probability": 2.0
+    },
+    {
+      "name": "Watcher's Eye",
+      "probability": 40.0,
+      "unidentified": true,
+      "poeWatchName": "Unidentified Watcher's Eye 85"
+    },
+    {
+      "name": "Void of the Elements",
+      "probability": 1.0
     }
   ]
 }

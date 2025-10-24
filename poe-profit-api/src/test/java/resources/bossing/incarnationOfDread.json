@@ -1,6 +1,9 @@
 {
   "name": "Incarnation of Dread",
   "id": "incartionOfDread",
+  "wikiUrl": "https://www.poewiki.net/wiki/Incarnation_of_Dread",
+  "imageUrl": "incarnationOfDread.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9CZW5ldm9sZW5jZUJvc3NNZW1vcnlLZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/10951f2bd1/BenevolenceBossMemoryKey.png",
   "costs": [
     {
       "name": "Echo of Reverence",
@@ -9,28 +12,28 @@
   ],
   "rewards": [
     {
-      "name": "Orb of Unravelling",
-      "probability": 33.0
-    },
-    {
-      "name": "Wine of the Prophet",
-      "probability": 2.5
-    },
-    {
       "name": "Whispers of Infinity",
       "probability": 50.0
     },
     {
       "name": "The Dark Monarch",
-      "probability": 35.0
-    },
-    {
-      "name": "Bound by Destiny",
-      "probability": 8.5
+      "probability": 37.0
     },
     {
       "name": "Seven Teachings",
-      "probability": 15.0
+      "probability": 11.0
+    },
+    {
+      "name": "Wine of the Prophet",
+      "probability": 2.0
+    },
+    {
+      "name": "Bound by Destiny",
+      "probability": 9.0
+    },
+    {
+      "name": "Orb of Unravelling",
+      "probability": 32.0
     }
   ]
 }

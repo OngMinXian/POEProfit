@@ -1,0 +1,191 @@
+{
+  "name": "The Maven (Uber)",
+  "id": "uberMaven",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Maven",
+  "imageUrl": "maven.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleU1hdmVuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1876f58c4b/UberBossKeyMaven.png",
+  "costs": [
+    {
+      "name": "Reality Fragment",
+      "quantity": 5
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Viridi's Veil",
+      "probability": 52.5
+    },
+    {
+      "name": "Impossible Escape",
+      "probability": 32.0
+    },
+    {
+      "name": "Grace of the Goddess",
+      "probability": 13.0
+    },
+    {
+      "name": "Progenesis",
+      "probability": 2.5
+    },
+    {
+      "name": "Awakened Enlighten Support",
+      "probability": 0.25
+    },
+    {
+      "name": "Awakened Empower Support",
+      "probability": 0.25
+    },
+    {
+      "name": "Awakened Enhance Support",
+      "probability": 0.25
+    },
+    {
+      "name": "Curio of Potential",
+      "probability": 5.0
+    },
+    {
+      "name": "Orb of Conflict",
+      "probability": 30.0
+    },
+    {
+      "name": "Awakened Added Chaos Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Added Cold Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Added Fire Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Added Lightning Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Brutality Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Burning Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Cold Penetration Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Controlled Destruction Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Deadly Ailments Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Elemental Damage with Attacks Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Elemental Focus Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Fire Penetration Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Lightning Penetration Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Melee Physical Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Melee Splash Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Minion Damage Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Swift Affliction Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Unbound Ailments Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Vicious Projectiles Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Void Manipulation Support",
+      "probability": 1.0
+    },
+    {
+      "name": "Awakened Ancestral Call Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Arrow Nova Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Blasphemy Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Cast On Critical Strike Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Cast While Channelling Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Chain Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Fork Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Generosity Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Greater Multiple Projectiles Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Hextouch Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Increased Area of Effect Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Multistrike Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Spell Cascade Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Spell Echo Support",
+      "probability": 0.33
+    },
+    {
+      "name": "Awakened Unleash Support",
+      "probability": 0.33
+    }
+  ]
+}

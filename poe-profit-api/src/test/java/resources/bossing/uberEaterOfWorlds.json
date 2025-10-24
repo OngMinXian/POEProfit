@@ -1,6 +1,9 @@
 {
-  "name": "Uber Eater of Worlds",
+  "name": "The Eater of Worlds (Uber)",
   "id": "uberEaterOfWorlds",
+  "wikiUrl": "https://www.poewiki.net/wiki/The_Eater_of_Worlds",
+  "imageUrl": "theEaterOfWorlds.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVhdGVyT2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/935c580d4c/UberBossKeyEaterOfWorlds.png",
   "costs": [
     {
       "name": "Devouring Fragment",
@@ -9,6 +12,22 @@
   ],
   "rewards": [
     {
+      "name": "Ravenous Passion",
+      "probability": 66.0
+    },
+    {
+      "name": "Ashes of the Stars",
+      "probability": 33.0
+    },
+    {
+      "name": "Nimis",
+      "probability": 1.0
+    },
+    {
+      "name": "Curio of Consumption",
+      "probability": 5.0
+    },
+    {
       "name": "Forbidden Flesh",
       "probability": 5.0,
       "unidentified": true,
@@ -16,31 +35,15 @@
       "level": 86
     },
     {
-      "name": "Nimis",
-      "probability": 1.0
-    },
-    {
-      "name": "Ashes of the Stars",
-      "probability": 33.0
-    },
-    {
       "name": "Exceptional Eldritch Ichor",
       "probability": 15.0
     },
     {
-      "name": "Curio of Consumption",
+      "name": "Eldritch Orb of Annulment",
       "probability": 5.0
-    },
-    {
-      "name": "Ravenous Passion",
-      "probability": 66.0
     },
     {
       "name": "Eldritch Chaos Orb",
-      "probability": 5.0
-    },
-    {
-      "name": "Eldritch Orb of Annulment",
       "probability": 5.0
     },
     {
