@@ -17,6 +17,7 @@ public class AbstractConfig {
     private ArrayList<Reward> rewards;
     private String wikiUrl;
     private String imageUrl;
+    private String icon = RepositoryConstants.ICON_ERROR_URL;
 
     private final String UNABLE_TO_GET_CHAOS_VALUE_LOG = "Unable to get chaos value of {}";
 

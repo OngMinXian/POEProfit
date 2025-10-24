@@ -3,6 +3,7 @@
   "id": "elder",
   "wikiUrl": "https://www.poewiki.net/wiki/The_Elder",
   "imageUrl": "theElder.jpg",
+  "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FbGRlckNvbXBsZXRlIiwic2NhbGUiOjF9XQ/6db44597fe/ElderComplete.png",
   "costs": [
     {
       "name": "Fragment of Purification",
