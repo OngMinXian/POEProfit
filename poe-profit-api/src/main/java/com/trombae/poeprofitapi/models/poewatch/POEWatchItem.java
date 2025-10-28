@@ -1,4 +1,4 @@
-package com.trombae.poeprofitapi.poewatch;
+package com.trombae.poeprofitapi.models.poewatch;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

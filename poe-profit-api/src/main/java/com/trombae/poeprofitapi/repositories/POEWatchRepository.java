@@ -3,7 +3,7 @@ package com.trombae.poeprofitapi.repositories;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.trombae.poeprofitapi.constants.RepositoryConstants;
-import com.trombae.poeprofitapi.poewatch.POEWatchItem;
+import com.trombae.poeprofitapi.models.poewatch.POEWatchItem;
 import com.trombae.poeprofitapi.utils.clients.POEWatchClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
